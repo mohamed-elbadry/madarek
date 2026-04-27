@@ -1,0 +1,7 @@
+{
+  "name": "madarek",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
