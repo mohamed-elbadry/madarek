@@ -1,0 +1,72 @@
+.logo-container {
+  text-align: center;
+  margin-top: 40px;
+
+  img {
+    width: 120px;
+  }
+}
+.hallo {
+    margin-top: 30%;
+}
+.phone-item {
+  //  display: flex;
+  align-items: center;
+  justify-content: end;
+  --background: transparent !important;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.phone-item ion-label {
+ transform: translateY(0%) scale(1);
+ text-align: start;
+ display: block;
+ margin-bottom: 10px;
+}
+.phone-item ion-input{
+  border: 1px solid #CDD3DD;
+  padding:0px 14px !important;
+  border-radius: 10px;
+  text-align: start;
+  
+}
+.phone-item ion-input img {
+  width: 20px;
+  
+}
+.terms {
+  display: flex;
+  align-items: center;
+  // justify-content: end;
+  text-align: start;
+  gap: 10px;
+  margin: 15px 0;
+  color: #0a1f44;
+}
+.terms ion-label{
+  font-family: 'Vazirmatn-regular';
+}
+.terms ion-label span{
+  font-family: 'Vazirmatn-bold';
+}
+.terms ion-checkbox {
+  --border-width: 2px;
+  --border-style: solid;
+  --border-color: #D3D7DE;
+   width: 25px !important;
+  height: 25px !important;
+}
+.google-btn,
+.guest-btn {
+  --border-radius: 12px;
+  height: 50px;
+  margin-top: 15px;
+  --background: #f2f2f2;
+  color: #000;
+  --border-color: #D3D7DE;
+}
+
+.google-icon {
+  width: 20px;
+  margin-left: 10px;
+}

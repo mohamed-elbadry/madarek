@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
-import { AuthGuard } from '../core/guards/auth-guard';
 
 export const routes: Routes = [
   {
@@ -25,14 +24,14 @@ export const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/consultant/tab1',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-  redirectTo: '/consultant/tabs/tab1',
-  pathMatch: 'full',
+    redirectTo: '/consultant/tab1',
+    pathMatch: 'full',
   },
 ];

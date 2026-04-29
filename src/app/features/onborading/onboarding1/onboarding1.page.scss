@@ -1,0 +1,40 @@
+.on-borading {
+ --background: url("../../../../assets/img/onborading/Pic.png") no-repeat center center / cover;
+}
+
+.ion-text-center {
+   background-color: #fff;
+    width: 100%;
+    position: relative;
+}
+.orang {
+  --background: #E4541B;   
+  --color: #fff;          
+  --border-radius: 10px; 
+  height: 50px;
+}
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+.p-10{
+  padding-inline-end: 10px;
+}
+.ion-text-center::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to top,
+    #ffffff 0%,
+   
+    rgba(255, 255, 255, 0.1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+}

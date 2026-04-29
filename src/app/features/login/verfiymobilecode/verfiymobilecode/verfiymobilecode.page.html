@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true" class="on-borading">
+  
+ <div class="ion-margin ion-display-flex ion-justify-content-between ion-paddingn ion-align-items-center">
+    
+    <span class="fw-SemiBold">English</span>
+    <ion-button [routerLink]="['/mobilecode']" fill="clear" class="fw-SemiBold text-primary"> عودة<img src="../../../assets/img/icon/Icon.svg" class="ps-10 ion-align-item-center"></ion-button>
+  </div>
+  <div class=" ion-align-items-center ion-display-flex ion-flex-column hallo g-20">
+    <img src="../../../../assets/img/logo/Logo.svg" alt="logo">
+   <img src="../../../../assets/img/icon/g-phone.svg" alt="phone" class="phone">
+    <h2 class="fw-black fs-24 m-0 p-0">تأكيد الجوال</h2>
+    <p class="fw-black fs-16 m-0 p-0">فضلا ادخل كود التفعيل المرسل</p>
+  </div>
+
+ 
+ <ion-input-otp [(ngModel)]="otp" [length]="4"></ion-input-otp>
+    
+    <div class="sure">
+       <ion-button expand="block" class="orang fw-SemiBold" (click)="verifyOtp()"><img src="../../../../assets/img/icon/sure.svg" alt="" class="pe-10">تأكيد رقم الجوال</ion-button>
+      
+    </div>
+   <div class="text ion-display-flex ion-justify-content-center ion-align-items-center">
+  <p class="fw-regular">لم تصلك رسالة ؟ <span class="fw-SemiBold">أعد الأرسال</span> بعد 30 ثانية</p>
+</div>
+  
+ 
+</ion-content>

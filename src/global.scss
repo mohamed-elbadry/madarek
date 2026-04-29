@@ -35,3 +35,160 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+
+@font-face {
+    font-family: 'Vazirmatn-bold';
+    src: url(../src/assets/fonts/Vazirmatn-Bold.ttf);
+}
+@font-face {
+    font-family: 'Vazirmatn-SemiBold';
+    src: url(../src/assets/fonts/Vazirmatn-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Vazirmatn-extrabold';
+    src: url(../src/assets/fonts/Vazirmatn-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'Vazirmatn-regular';
+    src: url(../src/assets/fonts/Vazirmatn-Regular.ttf);
+}
+@font-face {
+    font-family: 'Vazirmatn-black';
+    src: url(../src/assets/fonts/Vazirmatn-Black.ttf);
+}
+@font-face {
+    font-family: 'Vazirmatn-medium';
+    src: url(../src/assets/fonts/Vazirmatn-Medium.ttf);
+}
+@font-face {
+    font-family: 'Vazirmatn-light';
+    src: url(../src/assets/fonts/Vazirmatn-light.ttf);
+}
+body{
+    direction: rtl;
+}
+.fw-bold{
+    font-family: 'Vazirmatn-bold';
+}
+.fw-SemiBold{
+    font-family: 'Vazirmatn-SemiBold';
+}
+.fw-extre-bold{
+    font-family: 'Vazirmatn-extrabold';
+}
+.fw-regular{
+    font-family: 'Vazirmatn-regular'!important;
+}
+.fw-black{
+    font-family: 'Vazirmatn-black';
+}
+.fw-medium{
+    font-family: 'Vazirmatn-medium';
+}
+.fw-light{
+    font-family: 'Vazirmatn-light';
+}
+body{
+    font-family: 'Vazirmatn-regular' !important;
+}
+:root {
+    --text-primary: #061B42 !important;
+    --text-secondary: #E4541B !important;
+}
+.text-primary{
+    color: var(--text-primary);
+}
+.text-secondary{
+    color: var(--text-secondary);
+}
+.container{
+    // width: 90%;
+    margin: 0 auto;
+    padding-inline: 20px;
+}
+.ps-10{
+    padding-inline-start: 10px !important;
+}
+.pe-10{
+    padding-inline-end: 10px !important;
+}
+.orang {
+  --background: #E4541B;   
+  --color: #fff;          
+  --border-radius: 10px; 
+  height: 50px;
+  width: 100%;
+}
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+.p-10{
+  padding-inline-end: 10px;
+  
+}
+.w-100 {
+    width: 100%;
+}
+.g-20{
+    gap: 20px;
+}
+.has-focus.sc-ion-input-md-h input.sc-ion-input-md{
+    caret-color: none !important;
+    border-color: none !important;
+}
+.transpernt {
+  --background: transparent;
+  border: 1px solid #D3D7DE;
+  border-radius: 10px;
+  --box-shadow: none;
+  height: 50px;
+  width: 100%;
+}
+.ion-text-center {
+   background-color: #fff;
+    width: 100%;
+    position: relative;
+}
+.ion-text-center::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to top,
+    #ffffff 0%,
+   
+    rgba(255, 255, 255, 0.1) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+}
+
+
+ion-toast{
+    --padding: 10px 20px;
+}
+ion-toast.custom-toast {
+  --background:var(--text-secondary) ;
+  --color: #fff;
+
+  --border-radius: 10px;
+  --width: 100%;
+ 
+
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+.header-md {
+    /* -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); */
+    box-shadow: none !important;
+}
