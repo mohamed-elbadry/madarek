@@ -44,4 +44,5 @@ export class PurchaseServiceComponent implements OnInit {
       this.activeTime.push(time); // set active
     }
   }
+  
 }

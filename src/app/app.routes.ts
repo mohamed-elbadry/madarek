@@ -58,5 +58,5 @@ export const routes: Routes = [
     path: 'consultant',
     loadChildren: () =>
       import('./consultant/tabs/tabs.routes').then(m => m.routes)
-  },
+  }
 ];

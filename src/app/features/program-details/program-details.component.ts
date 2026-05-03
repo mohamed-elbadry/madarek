@@ -3,6 +3,7 @@ import { IonButton, IonButtons, IonModal, ModalController, IonHeader, IonContent
 import { Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from "src/app/shared/header/header.component";
 import { AuthService } from '../../core/services/auth';
+import { PurchaseServiceComponent } from '../purchase-service/purchase-service.component';
 
 
 @Component({
@@ -25,9 +26,13 @@ export class ProgramDetailsComponent implements OnInit {
   closemodal() {
     return this.modalCtrl.dismiss();
   }
-payservice() {
-this.router.navigate(['/purchase-service']);
-    return this.modalCtrl.dismiss();
+async payservice() {
+ const modal = await this.modalCtrl.create({
+    component: PurchaseServiceComponent,
+  })
+
+   await modal.present();
+
 
 }
 }
