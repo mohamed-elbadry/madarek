@@ -1,0 +1,88 @@
+<!-- Overlay Menu -->
+<div class="side-menu" *ngIf="isMenuOpen">
+
+  <!-- 🔵 الهيدر بتاع المينيو -->
+  <div class="menu-header ion-display-flex ion-justify-content-between ion-align-items-center">
+
+    <!-- زرار الاكزيت -->
+    <img src="../../../assets/img/icon/exit-button.svg" (click)="closeMenu()" class="exit-icon">
+
+    <!-- اللوجو -->
+    <img src="../../../assets/img/logo/Logo-white.svg" class="menu-logo">
+
+    <!-- النوتفكيشن -->
+    <div class="notification-wrapper">
+      <img src="../../../assets/img/icon/Notifications-bellwhite.svg" alt="notification">
+      <ion-badge color="warning" class="notification-badge">2</ion-badge>
+    </div>
+
+  </div>
+
+
+  <!-- 🔵 الكارت -->
+<div class="profile-card">
+
+  <!-- زرار Edit -->
+  <img src="../../../assets/img/icon/Edite-Button.svg" class="edit-icon" (click)="openEdit()">
+  
+  <div class="profile-content">
+    <img src="../../../assets/img/home/Avatar-5.png" class="profile-img">
+
+    <h2>أحمد عبد العزيز</h2>
+    <div class="ion-display-flex ion-justify-content-center ion-align-items-center gap-10 pading-10">
+      <p class="fw-bold">054 25877455</p>
+      <img src="../../../assets/img/icon/verified.svg" alt="">
+       <span class="fw-regular">مشترك من 14 مايو 2024</span>
+    </div>
+   
+  </div>
+
+</div>
+
+  <!-- اللينكات -->
+  <div class="menu-content">
+
+    <div class="menu-item">
+      <img src="../../../assets/img/icon/Madarik Logo.svg">
+      <span>عن مدارك</span>
+    </div>
+
+    <div class="menu-item">
+      <img src="../../../assets/img/icon/lightbulb-04.svg">
+      <span>الخدمات</span>
+    </div>
+
+    <div class="menu-item" (click)="gopage()">
+      <img src="../../../assets/img/icon/Programs.svg">
+      <span>البرامج المعتمدة</span>
+    </div>
+    <!-- <div class="ion-display-flex ion-justify-content-between ion-align-items-center"></div> -->
+    <div class="menu-item">
+      <img src="../../../assets/img/icon/Training.svg">
+      <span>سجلي التدريبي</span>
+    </div>
+
+    <div class="menu-item">
+      <img src="../../../assets/img/icon/message-check-circle.svg">
+      <span>الدعم الفني</span>
+    </div>
+    
+     <div class="menu-item">
+      <img src="../../../assets/img/icon/share-07.svg">
+      <span>مشاركه التطبيق</span>
+    </div>
+
+     <div class="menu-item">
+      <img src="../../../assets/img/icon/broken.svg">
+      <span>الشروط والأحكام</span>
+    </div>
+      <ion-buttons class="center-buttons">
+        <ion-button class="fw-medium fs-14" (click)="logout()">
+          <img class="pe-10" src="../../../assets/img/icon/log-out-04.svg" alt="log-out" >
+         تسجيل خروج
+        </ion-button>
+      </ion-buttons>
+  </div>
+
+</div>
+ 

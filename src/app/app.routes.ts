@@ -12,8 +12,7 @@ export const routes: Routes = [
   {
     path:'tabs',
     loadChildren: () => import('./tabs/tabs.routes').then(m => m.routes),
-    canActivate: [AuthGuard],
-    data: { type: 'otp' }
+   
   },
 
   // 🟡 Onboarding
@@ -59,5 +58,5 @@ export const routes: Routes = [
     path: 'consultant',
     loadChildren: () =>
       import('./consultant/tabs/tabs.routes').then(m => m.routes)
-  }
+  },
 ];

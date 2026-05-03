@@ -1,0 +1,12 @@
+<ion-header [translucent]="true" class="ion-margin-bottom">
+  <ion-toolbar >
+  <ion-buttons slot="start">
+    <ion-button>  <img src="../../assets/img/icon/Side_menu.svg" style="cursor: pointer;" (click)="openMenu()"> </ion-button>
+  </ion-buttons>
+  <ion-title><h2 class="fw-black ion-text-center fs-20 text-dark">{{title}}</h2></ion-title>
+  <ion-buttons slot="end">
+    <ion-button>  <img src="../../assets/img/icon/Back.svg" *ngIf="!gobackbtn" style="cursor: pointer;" (click)="goback()">
+      <img src="../../assets/img/icon/Back.svg"*ngIf="closemodal" style="cursor: pointer;" (click)="close()"> </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>

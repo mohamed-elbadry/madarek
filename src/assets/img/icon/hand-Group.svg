@@ -1,0 +1,30 @@
+<svg width="77" height="99" viewBox="0 0 77 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dd_2357_3362)">
+<path d="M38.7742 38.4487V32.7216M38.7742 32.7216C38.7742 31.9252 39.0972 31.2035 39.6196 30.6821C40.141 30.1598 40.8626 29.8368 41.659 29.8368C43.2527 29.8368 44.5439 31.1288 44.5439 32.7216V34.1197M38.7742 32.7216L38.774 19.4165C38.774 17.8401 37.5348 16.5114 35.9594 16.4737C35.1351 16.4543 34.3862 16.7808 33.8496 17.3185C33.328 17.8411 33.0048 18.562 33.0048 19.3583V42.6055C33.0048 43.4826 31.896 43.8651 31.355 43.1744L25.8035 36.0766C25.2205 35.3309 24.3488 34.9376 23.4652 34.9376C22.8736 34.9376 22.2788 35.1132 21.7605 35.4774C20.3909 36.4408 20.0892 38.3448 21.0935 39.6831L25.2873 45.2778L31.8475 54.0308C33.7774 56.605 36.8085 58.1211 40.0261 58.1211H46.2544C47.9892 58.1211 49.6648 57.6804 51.1421 56.8766C52.6195 56.0716 53.8996 54.9025 54.8403 53.4456C55.6528 52.1881 56.0849 50.7227 56.0849 49.2259V36.3018C56.0838 34.7092 54.7929 33.4182 53.1992 33.4182C52.4018 33.4182 51.6809 33.7415 51.1583 34.2641C50.6368 34.7857 50.3134 35.5076 50.3134 36.3039M44.5439 34.1197L44.5438 38.4487M44.5439 34.1197C44.5439 33.3233 44.8667 32.6024 45.3891 32.0801C45.9105 31.5578 46.6322 31.2348 47.4286 31.2348C49.0223 31.2348 50.3134 32.5268 50.3134 34.1196V36.3039M50.3134 36.3039L50.3135 39.236" stroke="#E4541B" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
+</g>
+<path d="M44.7876 10.9502C45.1087 11.8963 45.2822 12.9081 45.2822 13.9598C45.2822 16.8994 43.9244 19.5275 41.8027 21.2516" stroke="#EF9876" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.9849 10.1951C22.4758 11.5463 22.2007 12.9913 22.2007 14.4933C22.2007 18.6915 24.3535 22.445 27.7178 24.9073" stroke="#E4541B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.9744 21.2515C27.8538 19.5274 26.4961 16.8992 26.4961 13.9597C26.4961 8.78096 30.7093 4.56665 35.8891 4.56665C38.6552 4.56665 41.1454 5.76812 42.8652 7.67755" stroke="#EF9876" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M44.706 24.9073C47.8032 22.4369 49.7861 18.6711 49.7861 14.4591C49.7861 7.03859 43.6326 1 36.0675 1C32.0276 1 28.3906 2.72156 25.8788 5.45753" stroke="#E4541B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.6531 16.6046C30.2506 15.8094 30.0234 14.9114 30.0234 13.9594C30.0234 10.7203 32.6502 8.09351 35.8893 8.09351C39.1284 8.09351 41.7541 10.7203 41.7541 13.9594C41.7541 14.9179 41.5236 15.8234 41.1158 16.6229" stroke="#FADDD1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<filter id="filter0_dd_2357_3362" x="0" y="15.9729" width="76.585" height="82.6482" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="4" operator="erode" in="SourceAlpha" result="effect1_dropShadow_2357_3362"/>
+<feOffset dy="8"/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.03 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2357_3362"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="4" operator="erode" in="SourceAlpha" result="effect2_dropShadow_2357_3362"/>
+<feOffset dy="20"/>
+<feGaussianBlur stdDeviation="12"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0627451 0 0 0 0 0.0941176 0 0 0 0 0.156863 0 0 0 0.08 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_2357_3362" result="effect2_dropShadow_2357_3362"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_2357_3362" result="shape"/>
+</filter>
+</defs>
+</svg>

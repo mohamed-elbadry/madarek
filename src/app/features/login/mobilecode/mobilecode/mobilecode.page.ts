@@ -13,7 +13,7 @@ import {
 } from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth';
-import { ToastController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-mobilecode',
@@ -95,7 +95,6 @@ export class MobilecodePage implements OnInit {
 
   // 👤 Guest mode
   goToConsultant() {
-    this.auth.setGuest(true);
     this.router.navigate(['/tabs/tab1']);
   }
 }

@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { IonContent, IonButton } from "@ionic/angular/standalone";
+import { IonContent, IonButton, ModalController, IonModal } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-login-modal',
  templateUrl: './modal.component.html',
   standalone: true,
-  imports: [IonContent, IonButton]
+  imports: [IonContent, IonButton, IonModal]
 })
 export class LoginModalComponent {
 

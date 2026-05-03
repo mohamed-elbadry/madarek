@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonInputOtp } from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth';
-import { ToastController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-verfiymobilecode',
@@ -58,6 +58,7 @@ export class VerfiymobilecodePage implements OnInit {
 
     // التوجيه للتاب
     this.router.navigate(['/tabs/tab1']);
+    this.authservice.setGuest(true); // تم تسجيل الدخول بنجاح، مش Guest بعد كده
   }
 
   // 🔔 Toast

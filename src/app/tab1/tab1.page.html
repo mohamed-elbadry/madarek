@@ -3,7 +3,9 @@
 
   <div class="header container ion-display-flex ion-justify-content-between ion-align-items-center">
     
-    <img src="../../assets/img/icon/menu-toggle.svg" style="cursor: pointer;">
+    <img src="../../assets/img/icon/menu-toggle.svg"
+     style="cursor: pointer;"
+     (click)="openMenu()">
 
     <img src="../../assets/img/logo/Logo.svg" alt="logo" class="madarek">
 
@@ -23,8 +25,13 @@
     <input type="text" class="search-input" placeholder="ماذا تريد أن تتعلم اليوم؟">
   </div>
 </div>
-  <!-- <swiper-container autoplay="true" autoplay-delay="2500" loop="true" pagination="true">
-    <swiper-slide>
+ <swiper-container
+  autoplay="true"
+  autoplay-delay="2500"
+  loop="true"
+  pagination="true"
+>
+  <swiper-slide>
       <img src="../../assets/img/home/Frame 20.png" class="w-100">
     </swiper-slide>
   
@@ -35,7 +42,141 @@
     <swiper-slide>
       <img src="../../assets/img/home/Frame 20.png" class="w-100">
     </swiper-slide>
-  
-  </swiper-container> -->
+</swiper-container>
   </div>
+  <ion-segment value="personal" class="custom-segment p-10">
+  <ion-segment-button value="personal">
+    <ion-label class="fw-medium fs-14">
+     <img src="../../assets/img/icon/stars-02.svg">
+     أحدث الإضافات
+    </ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="business">
+    <ion-label class=" fw-medium fs-14">
+      <img src="../../assets/img/icon/trend-up-01.svg">
+     الأكثر طلبا
+    </ion-label>
+  </ion-segment-button>
+</ion-segment>
+<div class="container">
+  <ion-card (click)="openDetails()">
+  <ion-card-header>
+    <ion-card-title class="fw-bold fs-18">دورة الإقناع الفعال وتعلم كيفية التأثير بإيجابية في الآخرين</ion-card-title>
+    <ion-card-subtitle class="truncate-text fw-regular">
+     اكتشف أسرار الإقناع الفعال وتعلم كيفية التأثير بإيجابية في الآخرين من خلال هذه الدورة الشاملة والعملية. وتصميم مساحة عمل محفزة للتركيز أهمية التواصل المهني في العصر الحالي ويقدم نصائح حول كيفية بناء وصيانة شبكة علاقات مهنية قوية باستخدام الأدوات الرقمية والتقليدية
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-badge class="fw-medium bg-badge p-badge ion-display-inline-flex ion-align-items-center gap-5">
+      <img src="../../assets/img/icon/chart-breakout-circle.svg" alt="">
+       دورة تدريبية
+    </ion-badge>
+    <div class="text ion-display-flex ion-align-items-center fw-regular text-dark fs-14 gap-10 pb-10 mt-8">
+      <span class="ion-display-flex ion-align-items-start"> <img src="../../assets/img/icon/bank-note.svg" alt="bank-note" class="pe-5 pt-2">  السعر :</span>
+      <span class="text-decoration"> 2500 </span>
+       <span class="text-green">2000</span>
+      <span> ريال سعودي</span>
+    </div>
+     <div class="star ion-display-flex ion-align-items-center gap-10">
+    <p class="fw-regular">تقييم المشتركين :</p>
+    <div class="image ion-display-flex ion-align-items-center gap-5">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+    </div>
+   </div>
+   <div class="avatar ion-display-flex ion-align-items-center gap-10">
+    <img src="../../assets/img/home/Avatar.png" alt="avatar">
+    <div class="ion-display-flex ion-flex-column gap-5">
+      <h2 class="fw-black">د. لمي الصالح<img class="pad-10" src="../../assets/img/icon/verified.svg" alt="verified"></h2>
+      <p class="fw-regular">أستاذ اقتصاد الأسواق الناشئة</p>
+    </div>
+   </div>
+  </ion-card-content>
+</ion-card>
+</div>
+<div class="container">
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title class="fw-bold fs-18">تقنيات تحسين التركيز في عالم الأعمال</ion-card-title>
+    <ion-card-subtitle class="truncate-text fw-regular">ستراتيجيات عملية لتعزيز التركيز والإنتاجية في بيئة العمل الحديثة.
+      يغطي تقنيات مثل طريقة بومودورو
+      وإدارة الإشعارات، وتصميم مساحة عمل محفزة للتركيز أهمية التواصل المهني في العصر الحالي ويقدم نصائح
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-badge class="fw-medium bg-book p-badge ion-display-inline-flex ion-align-items-center gap-5">
+       <img src="../../assets/img/icon/book-open-02.svg" alt="book">
+      كتاب
+    </ion-badge>
+    <div class="text ion-display-flex ion-align-items-center fw-regular text-dark fs-14 gap-10 pb-10 mt-8">
+      <span class="ion-display-flex ion-align-items-start"> <img src="../../assets/img/icon/bank-note.svg" alt="bank-note" class="pe-5 pt-2">  السعر :</span>
+      <span class="text-decoration"> 2500 </span>
+       <span class="text-green">2000</span>
+      <span> ريال سعودي</span>
+    </div>
+     <div class="star ion-display-flex ion-align-items-center gap-10">
+    <p class="fw-regular">تقييم المشتركين :</p>
+    <div class="image ion-display-flex ion-align-items-center gap-5">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+    </div>
+   </div>
+   <div class="avatar ion-display-flex ion-align-items-center gap-10">
+    <img src="../../assets/img/home/Avatar-2.png" alt="avatar">
+    <div class="ion-display-flex ion-flex-column gap-5">
+      <h2 class="fw-black">د. محمد البلوي<img class="pad-10" src="../../assets/img/icon/verified.svg" alt="verified"></h2>
+      <p class="fw-regular">أستاذ اقتصاد الأسواق الناشئة</p>
+    </div>
+   </div>
+  </ion-card-content>
+</ion-card>
+</div>
+<div class="container">
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title class="fw-bold fs-18">سلسلة قوة العادات الذكية: لبناء روتين يحقق النجاح</ion-card-title>
+    <ion-card-subtitle class="truncate-text fw-regular">
+     كتاب يستكشف العلم وراء تكوين العادات وكيفية استخدام هذه المعرفة لبناء عادات إيجابية تدعم النجاح الشخصي والمهني. يقدم استراتيجيات عملية لتغيير السلوكيات غير المرغوب فيها وتبني أنماط حياة أكثر إنتاجية.
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="ion-display-flex  ion-align-items-center gap-10 pading-10">
+      <ion-badge class="fw-medium bg-video p-badge ion-display-inline-flex ion-align-items-center gap-5">
+        <img src="../../assets/img/icon/video-recorder.svg" alt="book">
+     فيديو
+    </ion-badge>
+     <h2 class="fw-bold">143 دقيقة</h2>
+    </div>
+     <div class="text ion-display-flex ion-align-items-center fw-regular text-dark fs-14 gap-10 pb-10 mt-8">
+      <span class="ion-display-flex ion-align-items-start"> <img src="../../assets/img/icon/bank-note.svg" alt="bank-note" class="pe-5 pt-2">  السعر :</span>
+     
+       <span class="fw-bold">125</span>
+      <span> ريال سعودي</span>
+    </div>
+     <div class="star ion-display-flex ion-align-items-center gap-10">
+    <p class="fw-regular">تقييم المشتركين :</p>
+    <div class="image ion-display-flex ion-align-items-center gap-5">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+      <img src="../../assets/img/icon/Star 4.svg" alt="star">
+    </div>
+   </div>
+   <div class="avatar ion-display-flex ion-align-items-center gap-10">
+    <img src="../../assets/img/home/Avatar-3.png" alt="avatar">
+    <div class="ion-display-flex ion-flex-column  gap-5">
+      <h2 class="fw-black">د. معتز عبد الخالق<img class="pad-10" src="../../assets/img/icon/verified.svg" alt="verified"></h2>
+      <p class="fw-regular">مدير مركز الدراسات الاسترايجية بجامعة كارديف</p>
+    </div>
+   </div>
+  </ion-card-content>
+</ion-card>
+</div>
 </ion-content>

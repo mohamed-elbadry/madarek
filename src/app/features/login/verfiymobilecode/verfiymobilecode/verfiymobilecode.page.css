@@ -1,0 +1,40 @@
+.hallo {
+  margin-top: 30%;
+}
+
+.hallo img {
+  width: 170px;
+}
+
+.hallo .phone {
+  width: 100px;
+}
+
+.sure {
+  padding: 10px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.ps-10 {
+  padding-inline-start: 10px;
+}
+
+.p-10 {
+  padding-inline-end: 10px;
+}
+
+.numper {
+  margin: 20px 0;
+  padding-inline: 40px;
+}
+
+.text p {
+  color: #E4541B;
+}
+
+.text span {
+  color: #98A2B3;
+}/*# sourceMappingURL=verfiymobilecode.page.css.map */

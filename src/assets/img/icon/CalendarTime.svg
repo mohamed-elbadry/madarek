@@ -1,0 +1,16 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8555 32.2916H6.354C3.76518 32.2916 1.6665 30.193 1.6665 27.6041V9.47913C1.6665 6.8903 3.76518 4.79163 6.354 4.79163H27.604C30.1928 4.79163 32.2915 6.8903 32.2915 9.47913V13.5416" stroke="#E4541B" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.9165 1.66663V7.91663" stroke="#E4541B" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.979 1.66663V7.91663" stroke="#E4541B" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.0415 1.66663V7.91663" stroke="#E4541B" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.1665 38.5416C34.3442 38.5416 38.5415 34.3443 38.5415 29.1666C38.5415 23.989 34.3442 19.7916 29.1665 19.7916C23.9888 19.7916 19.7915 23.989 19.7915 29.1666C19.7915 34.3443 23.9888 38.5416 29.1665 38.5416Z" stroke="#E4541B" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.2915 29.1666H29.1665V26.0416" stroke="#E4541B" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="7.9165" cy="13.5416" rx="1.5625" ry="1.5625" fill="#E4541B"/>
+<circle cx="13.854" cy="13.5416" r="1.5625" fill="#E4541B"/>
+<circle cx="20.104" cy="13.5416" r="1.5625" fill="#E4541B"/>
+<ellipse cx="7.9165" cy="19.7916" rx="1.5625" ry="1.5625" fill="#E4541B"/>
+<circle cx="13.854" cy="19.7916" r="1.5625" fill="#E4541B"/>
+<ellipse cx="7.9165" cy="26.0416" rx="1.5625" ry="1.5625" fill="#E4541B"/>
+<circle cx="13.854" cy="26.0416" r="1.5625" fill="#E4541B"/>
+<circle cx="26.0415" cy="13.5416" r="1.5625" fill="#E4541B"/>
+</svg>

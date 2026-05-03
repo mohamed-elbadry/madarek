@@ -1,1 +1,25 @@
 
+ion-tab-bar {
+  padding-inline: 20px;
+  --border: none !important;
+}
+
+ion-tab-button {
+  position: relative;
+}
+ion-tab-bar ion-tab-button.tab-selected {
+    color: var(--color-selected);
+    border-bottom: 4px solid  #E4541B;
+    background: #FBF3EF;
+    font-weight: 900;
+
+}
+
+
+ion-tab-button.tab-selected ion-label {
+  color: #E4541B;
+}
+ion-tab-button.tab-selected img {
+ filter: brightness(0) saturate(100%) invert(34%) sepia(59%) saturate(2294%) hue-rotate(356deg) brightness(96%) contrast(86%);
+}
+

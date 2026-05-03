@@ -11,14 +11,16 @@ export class AuthService {
   setPhone(phone: string) {
     this.phone = phone;
   }
-getPhone(): string {
-  return this.phone;
-}
+
+  getPhone(): string {
+    return this.phone;
+  }
+
   isAllowed(): boolean {
     return this.phone === '123456';
   }
 
-  // 🔐 OTP
+  // 🔐 OTP Error
   private otpError: string = '';
 
   setOtpError(msg: string) {
@@ -29,7 +31,7 @@ getPhone(): string {
     return this.otpError;
   }
 
-  // ✅ أضف دي (كانت ناقصة)
+  // 🔐 OTP
   setOtp(otp: string) {
     localStorage.setItem('otp', otp);
   }
@@ -42,13 +44,23 @@ getPhone(): string {
     return this.getOtp() === '1234';
   }
 
-  private isGuest: boolean = false;
+  // 👤 Guest Mode (تم التعديل هنا)
+  setGuest(value: boolean) {
+    localStorage.setItem('isGuest', JSON.stringify(value));
+  }
 
-setGuest(value: boolean) {
-  this.isGuest = value;
+  isGuestUser(): boolean {
+
+    return JSON.parse(localStorage.getItem('isGuest') || 'false');
+  }
+
+  // 🧹 (اختياري مهم) تسجيل خروج / Reset
+  logout() {
+    this.phone = '';
+    localStorage.removeItem('otp');
+    localStorage.removeItem('isGuest');
+  }
 }
 
-isGuestUser(): boolean {
-  return this.isGuest;
-}
-}
+
+
