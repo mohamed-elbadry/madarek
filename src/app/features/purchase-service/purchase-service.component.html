@@ -1,0 +1,40 @@
+<app-header [title]="'شراء الخدمة'"></app-header>
+<ion-content [fullscreen]="true">
+  <div class="pi-10">
+    <div class="service">
+      <h2 class="m-10 fw-bold text-dark fs-12">الخدمة</h2>
+  <p class="m-10 fw-regular fs-12 text-serv">
+    دورة الإقناع الفعال وتعلم كيفية التأثير بإيجابية في الآخرين
+  </p>
+    </div>
+    
+ <h2 class="text-main fw-black fs-20 lh-28 h2-with-icon">
+  <img src="../../../assets/img/icon/calendar-check-02.svg" alt="calendar-check-02">
+  اختر اليوم المناسب :
+</h2>
+<ion-datetime ></ion-datetime>
+<div class="time">
+  <h2 class="text-main fw-black fs-20 lh-28 h2-with-icon">
+    <img src="../../../assets/img/icon/Icon-clock.svg" alt="calendar-check-02">
+    اختر الوقت :
+  </h2>
+
+  <div class="time-chossen pading-10">
+    <div *ngFor="let time of timeSlots" 
+         class="text" 
+         [ngClass]="{'active': activeTime.includes(time)}" 
+         (click)="toggleTime(time)">
+      <span class="fw-SemiBold fs-14">{{ time }}</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <ion-button expand="block" class="orang fw-SemiBold fixed-btn" [routerLink]="['/service-costs']">
+   موافق
+  <img src="../../../assets/img/icon/Icon-right.svg" alt="Icon-right" class="ps-10">
+  </ion-button>
+  </div>
+</ion-content>

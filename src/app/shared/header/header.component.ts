@@ -3,6 +3,8 @@ import { IonHeader, ModalController, IonToolbar, IonButtons, IonButton, IonTitle
 import { NavController } from '@ionic/angular';
 import { NgIf } from '@angular/common';
 import { MenuService } from '../../core/services/menu';
+import { AuthService } from 'src/app/core/services/auth';
+import { LoginModalComponent } from 'src/app/features/login/modal/modal.component';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -19,14 +21,13 @@ export class HeaderComponent implements OnInit {
   constructor(
     private menuService: MenuService,
     private navCtrl: NavController,
-    private modalctrl: ModalController
+    private modalctrl: ModalController,
+     private authService: AuthService,
   ) {}
 
   ngOnInit() {}
 
-  openMenu() {
-    this.menuService.openMenu();
-  }
+ 
 
   goback() {
     this.navCtrl.back();
@@ -35,4 +36,23 @@ export class HeaderComponent implements OnInit {
   close() {
     this.modalctrl.dismiss();
   }
+   async openMenu() {
+  
+      // 👇 Guest → Modal
+      if (this.authService.isGuestUser()) {
+  
+        this.menuService.openMenu();
+        console.log('Is Guest User menu:', this.authService.isGuestUser());
+  
+      } else {
+  await this.modalctrl.dismiss();
+        const modal = await this.modalctrl.create({
+          component: LoginModalComponent,
+          cssClass: 'modal-content'
+        });
+  
+        await modal.present();
+        console.log('Is Guest User:', this.authService.isGuestUser());
+      }
+    }
 }

@@ -1,3 +1,196 @@
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #051532;
+  z-index: 99999;
+  color: white;
+
+  overflow-y: auto;   /* 👈 ده المهم */
+}
+
+/* الهيدر */
+.menu-header {
+  padding: 20px;
+ 
+}
+
+.exit-icon {
+  width: 22px;
+  cursor: pointer;
+}
+
+.menu-logo {
+  height: 30px;
+}
+
+/* المحتوى */
+.menu-content {
+  flex: 1;              /* ياخد باقي الشاشة */
+  
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* الخط تحت كل لينك */
+.menu-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+
+.profile-card {
+  background-color: #061B42;
+  margin: 20px;
+  padding: 30px 20px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  margin: 0;
+  color: #fff;
+ 
+}
+
+.profile-card p {
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+}
+.profile-card span {
+  margin: 0;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Overlay يغطي الشاشة كلها */
+.edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  z-index: 99999;
+   overflow-y: auto;
+}
+
+/* الصندوق الأبيض */
+.edit-box {
+  position: relative;
+  align-items: center;
+  border-radius: 15px;
+  width: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  max-height: 90vh;        /* 👈 مهم جداً */
+  overflow-y: auto;        /* 👈 ده اللي هيعمل scroll */
+}
+.edit-box input{
+  text-align: right;
+}
+/* الهيدر */
+.edit-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+ 
+}
+.edit-header h2{
+  margin: 0;
+  color: #072253;
+  font-size: 20px;
+}
+/* زر Exit */
+.exit-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* اللوجو */
+.edit-logo {
+  height: 30px;
+}
+
+/* Notification */
+.notification-wrapper {
+  position: relative;
+}
+.notification-wrapper img {
+  height: 20px;
+}
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 10px;
+}
+.profile-wrapper {
+  position: relative;  
+  top: 20%;
+}
+/* صورة الملف الشخصي */
+.edit-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px 0;
+}
+
+/* Inputs */
+.edit-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
 
 /* زر الحفظ */
 .save-btn {

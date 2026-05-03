@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { IonButton, IonButtons, IonModal, ModalController, IonHeader, IonContent, IonBadge, IonCard, IonFooter } from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from "src/app/shared/header/header.component";
+import { AuthService } from '../../core/services/auth';
+
 
 @Component({
   selector: 'app-program-details',
@@ -12,7 +14,11 @@ import { HeaderComponent } from "src/app/shared/header/header.component";
 })
 export class ProgramDetailsComponent implements OnInit {
 
-  constructor(private modalCtrl: ModalController,private router:Router) {}
+  constructor(
+  private modalCtrl: ModalController,
+  private router: Router,
+  public auth: AuthService
+) {}
 
   ngOnInit(): void {}
 
