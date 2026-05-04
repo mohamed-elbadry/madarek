@@ -1,0 +1,311 @@
+body{
+  --background:#f6f7f9;
+}
+.edit-header {
+    padding: 10px 20px;
+    background-color: #fff;
+    z-index: 99;
+  }
+  ion-button{
+    --background: none;
+    --box-shadow:var(--background);
+    --height: 42px !important;
+  }
+  ion-button:hover{
+    --background:none !important;
+  }
+.btn-white {
+    background-color: #E4541B;
+    color: #fff;
+    border: none;
+   height: 40px;
+    border-radius: 40px;
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    white-space: nowrap;  
+
+     --background-hover: #E4541B;
+  --background-focused: #E4541B;
+  --background-activated: #E4541B;
+}
+.btn-yellow {
+    background-color: #fff;
+    border: 1px solid #EAECF0;
+    box-shadow: 0px 0px 2px 0px rgba(16, 24, 40, 0.5) ;
+   
+    border-radius: 40px;
+  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;  
+     --background-hover: #fff;
+  --background-focused: #fff;
+  --background-activated: #fff;
+}
+ion-list{
+    padding: 10px 20px;
+}
+.custom-select-item {
+    width: 100%;
+  --border-color: #CDD3DD;       
+  --border-radius: 10px;     
+  --border-width: 1px;        
+}
+ion-item ion-select{
+    display: flex;
+    justify-content: space-between;
+}
+.custom-select-item {
+  --min-height: 50px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border: 1px solid #CDD3DD;   
+  border-radius: 10px;      
+  height: 50px;             
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;            
+}
+.custom-select {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-select::part(icon) {
+  order: 2;  
+
+}
+.custom-select::part(text) {
+  order: 1;
+  flex: 1;        
+  text-align: left; 
+}
+.icon {
+  border: 1px solid #CDD3DD;   
+  border-radius: 10px;
+  height: 50px;             
+  width: 60px;              
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;   
+}
+.icon img {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+}
+/*----cards------*/
+.card,
+ion-card{
+  border: 1px solid #EAECF0;
+  box-shadow: 0px 0px 2px 0px rgba(16, 24, 40, 0.05) ;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
+  --background: #fff;
+}
+ion-card-title{
+  font-size: 18px;
+  color: #E4541B;
+  line-height: 24px;
+  text-align: right;
+  margin: 0;
+}
+.card p,
+ion-card-subtitle{
+  font-size: 14px;
+  color: #061B42;
+  line-height: 24px;
+  text-align: right;
+  
+}
+.truncate-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.text h2,.text h3,.text h4,.text h5, .text p{
+ color: #061B42;
+ font-size: 14px;
+}
+.text h3{
+  text-decoration: line-through;
+}
+.text h4{
+  color: #009554;
+}
+.star {
+  position: relative;
+  padding-bottom: 15px; /* مسافة بين المحتوى والخط */
+}
+
+.star::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;      
+  height: 1px;       
+  background-color: #ddd;
+}
+.star p{
+  margin: 0;
+  color: #061B42;
+  font-size: 14px;
+}
+.star img{
+  width: 14px;
+  height: 14px;
+}
+ion-card img.image-head{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+ion-card{
+  padding: 0;
+  margin-inline: 0;
+}
+ion-card .right .cours{
+  background-color: #0E9384;
+  color: #fff;
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: right;
+}
+ion-card .minute{
+  font-size: 12px;
+  color: #333333;
+  margin: 0;
+}
+ion-card .cours.red{
+   background-color: #E10000 !important;
+  width: 100px;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  color: #fff;
+}
+.custom-select-wrapper {
+  position: relative;
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #CDD3DD !important;
+    padding-inline: 20px;
+}
+.custom-select-wrapper select {
+  appearance: none;         
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;  
+  width: 100%;
+  cursor: pointer;
+  border:  none !important;
+  padding: 10px;
+  outline: none !important;
+}
+.custom-arrow {
+  position: absolute;
+  left: 10px;              
+  top: 50%;
+  transform: translateY(-50%); 
+  pointer-events: none;      
+  width: 16px;
+  height: 16px;
+}
+ion-modal{
+  padding: 0px;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+ion-modal::part(content) {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+ion-modal .ok {
+  margin-top: 10%;
+  padding: 15px;
+  border-radius: 10px;
+  height: 48px;
+}
+h2 img {
+  vertical-align: middle; /* يحاذي الصورة في منتصف خط النص */
+  height: 1em; /* يخلي ارتفاع الصورة متناسب مع حجم الخط */
+  margin-left: 5px; /* مسافة بسيطة بين النص والصورة */
+}
+ion-checkbox  {
+   --border-radius: 6px;
+   --border-width: 2px;
+    --border-color: #D3D7DE;
+    --checkbox-background-checked: #5B220B;
+    --border-color-checked:#5B220B ;
+    --checkmark-color:#fff ;
+    --size: 24px;
+}
+.custom-segment{
+  display:flex;
+  gap:10px;
+ height: 40px;
+  background:transparent;
+  padding-inline: 20px;
+}
+.custom-segment ion-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+.custom-segment ion-segment-button{
+  --background: #fff;
+  --color:#344054;
+ --padding: 0px !important;
+  border:2px solid #EAECF0;
+  border-radius:40px;
+   justify-content: center;
+  align-items: center;
+  min-height: 40px !important;
+  flex:1;
+  --background-hover: 
+none
+;
+}
+.custom-segment ion-segment-button.segment-button-checked{
+ background:#E4541B !important;
+color:#fff !important;
+ --indicator-color: none;
+  border-color:#E4541B !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --color-checked: none;
+}
+ion-searchbar {
+  transition: all 0.25s ease-in-out;
+  --clear-button-color:#E4541B;
+}
+.search-programm {
+      width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #CDD3DD !important;
+    --box-shadow:none;
+}

@@ -1,15 +1,55 @@
-import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
+import { MenuService } from '../../app/core/services/menu';
+import { ModalController } from '@ionic/angular/standalone';
+import { ProgramDetailsComponent } from 'src/app/features/program-details/program-details.component';
+import { HeaderComponent } from "src/app/shared/header/header.component";
 
 @Component({
   selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent]
+  templateUrl: './tab2.page.html',
+  styleUrls: ['./tab2.page.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HeaderComponent
+]
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit {
 
-  constructor() {}
+  presentingElement!: HTMLElement;
 
+  constructor(
+     private menuService: MenuService,
+    private modalCtrl: ModalController
+  ) {}
+
+  ngOnInit(): void {
+  }
+
+  async openmodel() {
+    const modal = await this.modalCtrl.create({
+      component: ProgramDetailsComponent
+      
+    });
+
+    await modal.present();
+  }
+
+  openMenu() {
+    this.menuService.openMenu();
+  }
+isSearchOpen = false;
+
+openSearch() {
+  this.isSearchOpen = true;
+}
+
+closeSearch() {
+  this.isSearchOpen = false;
+}
 }

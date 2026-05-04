@@ -1,17 +1,101 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+  <app-header [title]="'الخدمات'"></app-header>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-segment value="personal" class="custom-segment">
+    <ion-segment-button value="personal">
+      <ion-label class="fw-medium fs-14">
+        <img src="../../assets/img/icon/target.svg" class="seg-icon">
+        الإرشاد الشخصي
+      </ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="business">
+      <ion-label class=" fw-medium fs-14">
+        <img src="../../assets/img/icon/building.svg" class="seg-icon">
+        استشارات الأعمال
+      </ion-label>
+    </ion-segment-button>
+  </ion-segment>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+
+  <ion-list>
+    <div class="search-container">
+
+  <!-- الجزء الافتراضي search-select -->
+  <div  [style.display]="isSearchOpen ? 'none' : 'flex'" class=" ion-align-items-center gap-10 search-select">
+    <div class="p-2 ion-display-flex ion-align-items-center custom-select-wrapper" id="open-modalsearch">
+      <span class="form-control text-darkblue custom-select">
+        اختر تصنيف ...
+      </span>
+      <img src="../../../assets/img/icon/chevron-down.svg" class="custom-arrow">
+    </div>
+
+    <div class="icon" (click)="openSearch()">
+      <img src="../../../../assets/img/icon/search-sm-orange.svg">
+    </div>
+  </div>
+
+  <!-- البحث يظهر فقط عند true -->
+  <ion-searchbar
+    *ngIf="isSearchOpen"
+     show-clear-button="always"
+    (ionClear)="closeSearch()"
+    placeholder="ابحث هنا"
+    value="ابحث هنا"
+    class="search-programm">
+  </ion-searchbar>
+
+</div>
+
+
+  </ion-list>
+  <div class="p-10">
+    <div class="card">
+      
+       <ion-card-title class="fw-bold" (click)="openmodel()"> دورة الإقناع الفعال وتعلم كيفية التأثير بإيجابية في الآخرين</ion-card-title>
+      <p class="truncate-text fw-regular">
+        اكتشف أسرار الإقناع الفعال وتعلم كيفية التأثير <br>بإيجابية في الآخرين من خلال هذه الدورة الشاملة<br> والعملية.
+        وتصميم
+        مساحة عمل محفزة للتركيز أهمية <br>التواصل المهني في العصر الحالي ويقدم نصائح حول كيفية بناء وصيانة شبكة علاقات
+        مهنية
+        قوية باستخدام الأدوات الرقمية والتقليدية
+      </p>
+
+      <ion-badge class="fw-medium bg-badge p-badge ion-display-inline-flex ion-align-items-center gap-5"
+        (click)="openmodel()">
+        <img src="../../assets/img/icon/chart-breakout-circle.svg" alt="">
+        دورة تدريبية
+      </ion-badge>
+
+      <div class="text ion-display-flex ion-align-items-center fw-regular text-dark fs-14 gap-10 pb-10 mt-8">
+      <span class="ion-display-flex ion-align-items-start"> <img src="../../assets/img/icon/bank-note.svg" alt="bank-note" class="pe-5 pt-2">  السعر :</span>
+      <span class="text-decoration"> 2500 </span>
+       <span class="text-secondery">2000</span>
+      <span> ريال سعودي</span>
+    </div>
+      <div class="star ion-display-flex ion-align-items-center gap-10">
+        <p class="fw-regular">تقييم المشتركين :</p>
+        <div class="image ion-display-flex ion-align-items-center gap-5">
+          <img src="../../assets/img/icon/Star 4.svg" alt="star">
+          <img src="../../assets/img/icon/Star 4.svg" alt="star">
+          <img src="../../assets/img/icon/Star 4.svg" alt="star">
+          <img src="../../assets/img/icon/Star 4.svg" alt="star">
+          <img src="../../assets/img/icon/Star 4.svg" alt="star">
+        </div>
+      </div>
+      <div class="avatar ion-display-flex ion-align-items-center gap-10">
+        <img src="../../assets/img/home/Avatar.png" alt="avatar">
+        <div class="ion-display-flex ion-flex-column gap-5">
+          <h2 class="fw-black text-primary fs-14">د.لمي الصالح<img class="pad-10" src="../../assets/img/icon/verified.svg" alt="verified">
+          </h2>
+          <p class="fw-regular">أستاذ اقتصاد الأسواق الناشئة</p>
+        </div>
+      </div>
+    </div>
+    
+
+   
+  </div>
+  
+  <!-----------modal-------------->
 </ion-content>

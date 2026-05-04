@@ -36,14 +36,14 @@ export class HeaderComponent implements OnInit {
   close() {
     this.modalctrl.dismiss();
   }
-  async closeAllModals() {
-  let top = await this.modalctrl.getTop();
+//   async closeAllModals() {
+//   let top = await this.modalctrl.getTop();
 
-  while (top) {
-    await top.dismiss();
-    top = await this.modalctrl.getTop();
-  }
-}
+//   while (top) {
+//     await top.dismiss();
+//     top = await this.modalctrl.getTop();
+//   }
+// }
    async openMenu() {
   
       // 👇 Guest → Modal
@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
         console.log('Is Guest User menu:', this.authService.isGuestUser());
   
       } else {
-  await this.closeAllModals();
+  // await this.closeAllModals();
         const modal = await this.modalctrl.create({
           component: LoginModalComponent,
           cssClass: 'modal-content'

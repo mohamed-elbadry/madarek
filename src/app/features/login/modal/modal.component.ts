@@ -18,9 +18,17 @@ export class LoginModalComponent {
   close() {
     this.modalCtrl.dismiss();
   }
+ async closeAllModals() {
+  let top = await this.modalCtrl.getTop();
 
-  goToLogin() {
-    this.modalCtrl.dismiss();
+  while (top) {
+    await top.dismiss();
+    top = await this.modalCtrl.getTop();
+  }
+}
+  async goToLogin() {
+     await this.closeAllModals();
+    
     this.router.navigate(['/mobilecode']);
   }
 }

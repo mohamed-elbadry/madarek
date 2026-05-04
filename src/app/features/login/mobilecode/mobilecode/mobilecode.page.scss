@@ -30,6 +30,9 @@
   text-align: start;
   
 }
+.phone-item ion-input:focus {
+  --border-color: none !important;
+}
 .phone-item ion-input img {
   width: 20px;
   
@@ -55,6 +58,21 @@
   --border-color: #D3D7DE;
    width: 25px !important;
   height: 25px !important;
+}
+.checkbox-row ion-checkbox{
+  --border-color: #CDD3DD;
+  --border-width: 1px;
+}
+.terms ion-checkbox-checked{
+  --checkbox-background-checked: #5b220b;
+  --border-color: #5b220b;               /* لون البوردر */
+  --checkmark-color: #fff;   
+} 
+.custom-check {
+  /* لون الخلفية لما يبقى متعلم */
+  --checkbox-background-checked: #5b220b;
+  --border-color: #5b220b;               /* لون البوردر */
+  --checkmark-color: #fff;               /* لون علامة الصح */
 }
 .google-btn,
 .guest-btn {

@@ -4,6 +4,7 @@ import { Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from "src/app/shared/header/header.component";
 import { AuthService } from '../../core/services/auth';
 import { PurchaseServiceComponent } from '../purchase-service/purchase-service.component';
+import { ConsultantDetailsComponent } from '../consultant-details/consultant-details.component';
 
 
 @Component({
@@ -35,4 +36,12 @@ async payservice() {
 
 
 }
+ async goToConsultant() {
+    const modal = await this.modalCtrl.create({
+        component: ConsultantDetailsComponent,
+        cssClass: 'modal-content'
+      });
+
+      await modal.present();
+  }
 }

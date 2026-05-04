@@ -112,6 +112,7 @@ body{
     --text-darkblue: #9CA7BA !important;
     --text-serv: #394E75 !important;
     --text-green: #009554 !important;
+    --text-secondery: #009554 !important;
     --text-dey: #6B7280 !important;
     --text-third: #333333 !important;
     --bg-badge: #0E9384;
@@ -203,6 +204,9 @@ body{
 }
 .text-green{
     color: var(--text-green);
+}
+.text-secondery{
+    color: var(--text-secondery);
 }
 .text-dey{
     color: var(--text-dey);
@@ -482,8 +486,24 @@ ion-tab-bar {
         --height: 100%;
     }
 }
+.native-input .sc-ion-input-md{
+    border: none !important;
+}
+.has-focus.ion-valid.sc-ion-input-md-h, .ion-touched.ion-invalid.sc-ion-input-md-h{
+    --border-color: transparent !important;
+}
 
-
+.has-focus.sc-ion-input-md-h input.sc-ion-input-md{
+    caret-color: transparent !important;
+}
+ion-input {
+  --highlight-color-focused: transparent;
+  --highlight-color-valid: transparent;
+  --highlight-color-invalid: transparent;
+}
+ion-item {
+  --highlight-height: 0;
+}
 .transpernt {
   --background: transparent;
   border: 1px solid #D3D7DE;
@@ -518,13 +538,35 @@ ion-tab-bar {
 ion-toast{
     --padding: 10px 20px;
 }
+// ion-toast.custom-toast {
+//   --background:var(--main-orange) ;
+//   --color: #fff;
+//   --border-radius: 10px;
+//    --width: calc(100% - 20px);
+//   --max-width: 100%;
+//     margin: 10px;
+//   --padding-top: 12px;
+//   --padding-bottom: 12px;
+//   --padding-start: 16px;
+//   --padding-end: 16px;
+//    left: 0;
+//   right: 0;
+// }
 ion-toast.custom-toast {
-  --background:var(--main-orange) ;
+  --background: var(--main-orange);
   --color: #fff;
-
   --border-radius: 10px;
-  --width: 100%;
- 
+
+  --width: calc(100% - 20px);
+  --max-width: none; /* مهم */
+
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center; /* يخلي المحتوى في النص */
+
+  transform: none !important; /* يلغي لعب Ionic */
 
   --padding-top: 12px;
   --padding-bottom: 12px;
@@ -581,4 +623,21 @@ ion-toast.custom-toast {
     width: 1px;
     background-color: #CDD3DD;
   }
+}
+
+.checkbox-row ion-checkbox{
+  --border-color: #CDD3DD;
+  --border-width: 1px;
+}
+.custom-check {
+  /* لون الخلفية لما يبقى متعلم */
+  --checkbox-background-checked: #5b220b;
+  --border-color: #5b220b;               /* لون البوردر */
+  --checkmark-color: #fff;               /* لون علامة الصح */
+}
+.ion-valid.sc-ion-input-md-h{
+    --highlight-color: transparent !important;
+}
+.ion-valid.sc-ion-input-otp-md-h{
+    --highlight-color: var(--main-orange) !important;
 }
