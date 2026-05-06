@@ -1,0 +1,58 @@
+<app-header [title]="'تكاليف الخدمة'"></app-header>
+<ion-content [fullscreen]="true">
+  <div class="pi-10">
+    <div class="text-cost">
+      <h2 class="m-10 fw-bold text-main fs-12">الخدمة</h2>
+    <p class="m-10 fw-regular fs-12 text-serv">
+      دورة الإقناع الفعال وتعلم كيفية التأثير بإيجابية في الآخرين
+    </p>
+    <h2 class="m-10 fw-bold text-main fs-12">الوقت والتاريخ :</h2>
+    <p class="m-10 fw-regular fs-12 text-serv">
+      6 أغسطس 2024 من 3:00م إلى 4:00 مساءً
+    </p>
+    </div>
+    
+    <h2 class="text-primary fw-bold fs-16 h2-with-icon">
+      <img src="../../../assets/img/icon/tag-01.svg" alt="tag-01">
+      تكاليف الخدمة :
+    </h2>
+    <div class="ion-flex-column gap-5">
+      <div class="ion-display-flex ion-justify-content-between ion-align-items-center">
+      <h2 class="fw-regular text-dark fs-16">مهارات القيادة الشخصية</h2>
+      <span class="fw-regular text-dark fs-16">450 ريال</span>
+    </div>
+    <div class="ion-display-flex ion-justify-content-between ion-align-items-center">
+      <h2 class="fw-regular text-dark fs-16">ضريبة القيمة المضافة</h2>
+      <span class="fw-regular text-dark fs-16">50 ريال</span>
+    </div>
+    </div>
+    <div class="pad-20 discount ">
+      <h2 class="text-light fw-medium fs-14 h2-with-icon">
+      <img src="../../../assets/img/icon/sale-01.svg" alt="sale-01">
+     هل لديك كود خصم ؟
+    </h2>
+    <ion-item lines="none" class="discount-input">
+      <ion-input class="text-darkblue fw-regular fs-16" placeholder="أدخل كود الخصم هنا"></ion-input>
+      <ion-button fill="solid" class="apply-btn fw-SemiBold fs-14">
+        <img src="../../../assets/img/icon/orang-icon.svg" alt="orang" class="pe-10">
+        تطبيق
+        <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    </div>
+    
+    <div class="ion-display-flex ion-justify-content-between ion-align-items-center">
+      <h2 class="fw-regular text-main fs-16">إجمالي القيمة :</h2>
+      <span class="fw-regular text-dark">500 ريال</span>
+    </div>
+    <div >
+      <ion-button expand="block" class="bottom-button fs-16 fw-SemiBold" [routerLink]="['/order-payment']">
+        أكمل الدفع
+        <img src="../../../assets/img/icon/Icon-right.svg" alt="icon" class="ps-10">
+      </ion-button>
+    </div>
+   
+  </div>
+
+ 
+</ion-content>

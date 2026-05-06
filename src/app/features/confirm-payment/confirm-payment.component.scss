@@ -1,0 +1,14 @@
+.btn-orange{
+  --background: #E4541B;
+  --color: #fff;
+  --box-shadow: none;
+}
+
+.btn-outline{
+  --border-color: #D3D7DE;
+ 
+}
+ion-button{
+    height: 48px;
+    --border-radius: 10px !important;
+}

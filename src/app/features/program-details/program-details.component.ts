@@ -3,11 +3,14 @@ import { IonButton, IonButtons, IonModal, ModalController, IonHeader, IonContent
 import { Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from "src/app/shared/header/header.component";
 import { AuthService } from '../../core/services/auth';
-import { PurchaseServiceComponent } from '../purchase-service/purchase-service.component';
 import { ConsultantDetailsComponent } from '../consultant-details/consultant-details.component';
+import { MenuService } from 'src/app/core/services/menu';
+import { LoginModalComponent } from '../login/modal/modal.component';
+import { PurchaseServiceComponent } from '../purchase-service/purchase-service.component';
 
 
 @Component({
+  
   selector: 'app-program-details',
   templateUrl: './program-details.component.html',
   styleUrls: ['./program-details.component.scss'],
@@ -19,7 +22,8 @@ export class ProgramDetailsComponent implements OnInit {
   constructor(
   private modalCtrl: ModalController,
   private router: Router,
-  public auth: AuthService
+  public authService: AuthService,
+  private menuService: MenuService
 ) {}
 
   ngOnInit(): void {}
@@ -27,15 +31,7 @@ export class ProgramDetailsComponent implements OnInit {
   closemodal() {
     return this.modalCtrl.dismiss();
   }
-async payservice() {
- const modal = await this.modalCtrl.create({
-    component: PurchaseServiceComponent,
-  })
 
-   await modal.present();
-
-
-}
  async goToConsultant() {
     const modal = await this.modalCtrl.create({
         component: ConsultantDetailsComponent,
@@ -44,4 +40,51 @@ async payservice() {
 
       await modal.present();
   }
+
+
+  async payservice() {
+
+  if (this.authService.isGuestUser()) {
+   console.log('IS GUEST:', this.authService.isGuestUser());
+   const modal = await this.modalCtrl.create({
+      component: PurchaseServiceComponent
+    });
+
+    await modal.present();
+
+  } else {
+
+    // 👇 User → Login
+    const modal = await this.modalCtrl.create({
+      component: LoginModalComponent,
+       cssClass: 'login-sheet-modal',
+      initialBreakpoint: 0.5,
+    breakpoints: [0, 0.5, 1],
+    backdropBreakpoint: 0.3,
+    handle: true
+    });
+
+    await modal.present();
+  }
+}
+
+  // async payservice() {
+  
+  //     // 👇 Guest → Modal
+  //     if (this.authService.isGuestUser()) {
+  //       console.log('Is Guest User menu:', this.authService.isGuestUser());
+  //      this.menuService.payservice();
+  
+  //     } 
+  //     else {
+  //       console.log('Is Guest User :', this.authService.isGuestUser());
+  
+  //       const modal = await this.modalCtrl.create({
+  //         component: LoginModalComponent,
+  //         cssClass: 'modal-content'
+  //       });
+  
+  //       await modal.present();
+  //     }
+  //   }
 }

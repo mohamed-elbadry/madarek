@@ -15,7 +15,8 @@ import {
   IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
-  IonCardTitle
+  IonCardTitle,
+  
 } from '@ionic/angular/standalone';
 
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
@@ -23,6 +24,7 @@ import { MenuService } from '../../app/core/services/menu';
 import { AuthService } from 'src/app/core/services/auth';
 import { LoginModalComponent } from '../features/login/modal/modal.component';
 import { ProgramDetailsComponent } from '../features/program-details/program-details.component';
+import { NoticeComponent } from '../features/notice/notice.component';
 
 @Component({
   selector: 'app-tab1',
@@ -68,7 +70,11 @@ export class Tab1Page {
 
       const modal = await this.modalCtrl.create({
         component: LoginModalComponent,
-        cssClass: 'modal-content'
+        cssClass: 'login-sheet-modal',
+      initialBreakpoint: 0.5,
+    breakpoints: [0, 0.5, 1],
+    backdropBreakpoint: 0.3,
+    handle: true
       });
 
       await modal.present();
@@ -85,4 +91,52 @@ export class Tab1Page {
 
       await modal.present();
   }
+
+  async opennotice() {
+
+    // 👇 Guest → Modal
+    if (this.authService.isGuestUser()) {
+      const modal = await this.modalCtrl.create({
+                component: NoticeComponent,
+                cssClass: 'modal-content',
+               
+              });
+        
+              await modal.present();
+      console.log('Is Guest User menu:', this.authService.isGuestUser());
+
+    } 
+    else {
+
+      const modallog = await this.modalCtrl.create({
+        component: LoginModalComponent,
+        cssClass: 'login-sheet-modal',
+      initialBreakpoint: 0.5,
+    breakpoints: [0, 0.5, 1],
+    backdropBreakpoint: 0.3,
+    handle: true
+      });
+      await modallog.present();
+
+      console.log('Is Guest User:', this.authService.isGuestUser());
+    }
+  }
+  //  async opennotice() {
+  //   const modal = await this.modalCtrl.create({
+  //       component: NoticeComponent,
+  //       cssClass: 'modal-content'
+  //     });
+
+  //     await modal.present();
+  // }
+//   async openLoginModal() {
+//   const modal = await this.modalCtrl.create({
+//     component: LoginModalComponent,
+//     breakpoints: [0, 0.3, 0.6, 1],
+//     initialBreakpoint: 0.3,
+//     cssClass: 'bottom-modal'
+//   });
+
+//   await modal.present();
+// }
 }

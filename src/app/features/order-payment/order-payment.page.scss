@@ -1,0 +1,167 @@
+body {
+--background:#f6f7f9;
+}
+.h2-with-icon
+ {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+.title-flex
+ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+}
+/*----------------------*/
+.discount-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #CDD3DD;
+  border-radius: 8px;
+  padding: 0 5px;
+
+  ion-input {
+    flex: 1;
+    --padding-start: 10px;
+    --padding-end: 10px;
+  }
+
+  .apply-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     --background: transparent; 
+  --color: #FF7A00;          
+  --box-shadow: none;
+  }
+}
+.bottom-button{
+ margin-top: 30%;
+}
+.bottom-button ion-button{
+    --background: #009554 !important;
+    --color: #fff;
+}
+/*---------------------*/
+.atm{
+  border: 1px solid #D3D7DE;
+  padding:10px 10px;
+  border-radius: 10px;
+  box-shadow:0 1px 2px 0px rgba(16, 24, 40, 0.06),
+  0 1px 3px 0px rgba(16, 24, 40, 0.1);
+  background: #fff;
+  height: 48px;
+}
+.payment-methods{
+  width: 100%;
+}
+
+.tabby{
+  flex: 1;               /* يخلي الاثنين ياخدوا نفس العرض */
+  border: 1px solid #ddd;
+  padding: 16px 22px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   box-shadow:0 1px 2px 0px rgba(16, 24, 40, 0.06),
+  0 1px 3px 0px rgba(16, 24, 40, 0.1);
+  background: #fff;
+  min-height: 140px;
+}
+
+.tabby img{
+  max-width: 100%;
+}
+
+/*---------modal--------------*/
+.card-inputs{
+    margin-top:20px !important;
+}
+.custom-input{
+  border: 1px solid #CDD3DD;
+  border-radius: 10px;
+  padding: 12px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+
+}
+.checkbox-row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox-row ion-checkbox{
+  --border-color: #CDD3DD;
+  --border-width: 1px;
+}
+.btn-row{
+  display: flex;
+  gap: 1px;          
+ 
+}
+
+.btn-row ion-button{
+  flex: 10px         
+}
+
+.btn-orange{
+  --background: #E4541B;
+  --color: #fff;
+  --box-shadow: none;
+ --border-radius: 8px;
+  height: 45px;
+}
+
+.btn-outline{
+  --border-color: #D3D7DE;
+  --color: #061B42;
+  --border-radius: 8px !important;
+  height: 45px;
+}
+
+
+ion-modal > .ion-page{
+  --border-start-end-radius: 20px !important;
+}
+ion-modal ion-content .checkbox-row ion-checkbox{
+  --size: 24px;
+}
+
+ion-modal::part(content) {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+
+
+.custom-input {
+  --background: #fff;
+  --border-radius: 12px;
+  border: 1px solid #EAECF0;
+
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06),
+              0 1px 3px 0 rgba(16, 24, 40, 0.1);
+
+ --highlight-color-focused: transparent;
+  --highlight-color-valid: transparent;
+  --highlight-color-invalid: transparent;
+}
+
+.custom-check {
+  /* لون الخلفية لما يبقى متعلم */
+  --checkbox-background-checked: #5b220b;
+  --border-color: #5b220b;               /* لون البوردر */
+  --checkmark-color: #fff;               /* لون علامة الصح */
+}
+
+.card-inputs ion-input{
+  --placeholder-color: #9CA7BA;
+ 
+ --placeholder-opacity:  1;
+}
+ion-datetime{
+  width: 100% !important;
+}

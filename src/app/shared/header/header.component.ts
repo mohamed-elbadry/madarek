@@ -5,6 +5,8 @@ import { NgIf } from '@angular/common';
 import { MenuService } from '../../core/services/menu';
 import { AuthService } from 'src/app/core/services/auth';
 import { LoginModalComponent } from 'src/app/features/login/modal/modal.component';
+import { NoticeComponent } from 'src/app/features/notice/notice.component';
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -44,7 +46,36 @@ export class HeaderComponent implements OnInit {
 //     top = await this.modalctrl.getTop();
 //   }
 // }
-   async openMenu() {
+
+
+  //  async openMenu() {
+  
+  //     // 👇 Guest → Modal
+  //     if (this.authService.isGuestUser()) {
+  
+  //       this.menuService.openMenu();
+  //       console.log('Is Guest User menu:', this.authService.isGuestUser());
+  
+  //     } else {
+  // // await this.closeAllModals();
+  //       const modal = await this.modalctrl.create({
+  //         component: LoginModalComponent,
+  //         cssClass: 'bottom-modal',
+  //           breakpoints: [0, 0.25, 0.5, 1],
+  // initialBreakpoint: 0.25,
+  // handle: true,
+  // backdropDismiss: true,
+  //  presentingElement: await this.modalctrl.getTop()
+  //       });
+  
+  //       await modal.present();
+  //       console.log('Is Guest User:', this.authService.isGuestUser());
+  //     }
+  //   }
+
+
+
+  async openMenu() {
   
       // 👇 Guest → Modal
       if (this.authService.isGuestUser()) {
@@ -63,4 +94,5 @@ export class HeaderComponent implements OnInit {
         console.log('Is Guest User:', this.authService.isGuestUser());
       }
     }
+    
 }

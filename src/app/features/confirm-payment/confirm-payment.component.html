@@ -1,0 +1,17 @@
+<app-header [title]="'تم الدفع'" [closemodal]="true" [gobackbtn]="true"></app-header>
+<ion-content [fullscreen]="true">
+  <div class="ion-text-center margin-top pi-10">
+    <img src="../../../assets/img/icon/credit-car-check.svg" alt="credit">
+    <h2 class="text-primary fw-medium fs-20">تم الدفع بنجاح</h2>
+    <p class="text-primary fw-medium fs-16">وتم إضافة الخدمة إلى سجلك التدريبي</p>
+    <div class="ion-display-flex ion-flex-column gap-10">
+      <ion-button class="btn-orange fw-SemiBold fs-16" (click)="gotrening()">
+        <img src="../../../assets/img/icon/My Training train.svg" alt="training" class="pe-10">
+       مطالعة السجل التدريبي
+      </ion-button>
+      <ion-button fill="outline" (click)="closemodal()" class="btn-outline fw-SemiBold fs-16 text-primary">
+       إغلاق
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

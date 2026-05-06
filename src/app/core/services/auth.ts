@@ -50,7 +50,6 @@ export class AuthService {
   }
 
   isGuestUser(): boolean {
-
     return JSON.parse(localStorage.getItem('isGuest') || 'false');
   }
 

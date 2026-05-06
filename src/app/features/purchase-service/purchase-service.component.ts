@@ -1,17 +1,23 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router'; // <-- استبدل RouterLink بـ RouterModule
-import { IonHeader, ModalController, MenuController, IonContent, IonDatetime, IonButton, IonSegment, IonSegmentButton, IonLabel } from "@ionic/angular/standalone";
+import { NavigationEnd, Router, RouterModule } from '@angular/router'; // <-- استبدل RouterLink بـ RouterModule
+import { IonHeader, ModalController, IonContent, IonDatetime, IonButton, IonSegment, IonSegmentButton, IonLabel } from "@ionic/angular/standalone";
 import { HeaderComponent } from "src/app/shared/header/header.component";
+import { MenuService } from 'src/app/core/services/menu';
+import { filter } from 'rxjs';
+import { AuthService } from 'src/app/core/services/auth';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-purchase-service',
-  standalone: true,
   templateUrl: './purchase-service.component.html',
   styleUrls: ['./purchase-service.component.scss'],
-  imports: [IonHeader, IonContent, IonDatetime, IonButton, RouterModule, HeaderComponent, IonSegment, IonSegmentButton, IonLabel,NgFor,NgClass], // <-- RouterModule هنا
+  standalone: true,
+  imports: [IonHeader, IonContent, IonDatetime, IonButton, RouterModule, HeaderComponent, RouterLink, IonSegment, IonSegmentButton, IonLabel,NgFor,NgClass], // <-- RouterModule هنا
 })
 export class PurchaseServiceComponent implements OnInit {
+  [x: string]: any;
  activeTime: string[] = [];
 
   // Time slots (you can also define directly in template)
@@ -22,7 +28,9 @@ export class PurchaseServiceComponent implements OnInit {
   ];
   constructor(
     private modalCtrl: ModalController,
-    private menuService: MenuController
+   private menuService: MenuService,
+    private router: Router,
+    private authService: AuthService,
   ) {}
 
   ngOnInit() {}
@@ -32,7 +40,7 @@ export class PurchaseServiceComponent implements OnInit {
   }
 
   openMenu() {
-    this.menuService.open();
+    this.menuService.openMenu();
   }
  
 
@@ -44,5 +52,52 @@ export class PurchaseServiceComponent implements OnInit {
       this.activeTime.push(time); // set active
     }
   }
+
+
+  closeModalAfterNavigate() {
+  this.router.events
+    .pipe(filter(event => event instanceof NavigationEnd))
+    .subscribe(async () => {
+      await this.modalCtrl.dismiss();
+    });
+  }
+  
+
+
+ 
+async goToServiceCosts() {
+    // 🔴 اقفل كل الـ modals (أفضل حل)
+   await this.modalCtrl.getTop().then(async (modal) => {
+      while (modal) {
+        await modal.dismiss();
+        modal = await this.modalCtrl.getTop();
+      }
+    });
+
+    this.router.navigate(['/service-costs']);
+  
+}
+
+
+// async goToServiceCosts() {
+//  console.log('NAVIGATING TO SERVICE COSTS');
+//   if (this.authService.isGuestUser()) {
+
+//     console.log('IS GUEST:', this.authService.isGuestUser());
+
+//     await this.modalCtrl.dismiss(); // يقفل أي modal
+
+//     this.router.navigate(['/service-costs']); // 👈 يروح للصفحة
+
+//   } else {
+
+//     const modal = await this.modalCtrl.create({
+//       component: LoginModalComponent,
+//       cssClass: 'modal-content'
+//     });
+
+//     await modal.present();
+//   }
+// }
   
 }

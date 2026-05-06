@@ -1,0 +1,90 @@
+<app-header [title]="'الدفع الامن'" ></app-header>
+<ion-content [fullscreen]="true">
+  <div class="pi-10 pai-top">
+    <h2 class="text-primary fw-bold fs-16 h2-with-icon pading-10">
+      <img src="../../../assets/img/icon/wallet-04.svg" alt="wallet">
+     اختر طريقة الدفع :
+    </h2>
+    <div class="ion-display-flex ion-flex-column gap-10">
+      <div class="ion-display-flex ion-justify-content-between ion-align-items-center atm" id="pay-modal">
+        <h2 class="fw-regular text-dark m-0 fs-16">أضف بطاقة ائتمانية</h2>
+        <img src="../../../assets/img/icon/Payment method icon.svg" alt="payment">
+      </div>
+   
+    <div class="ion-display-flex ion-justify-content-between ion-align-items-center atm">
+      <h2 class="fw-regular text-dark m-0 fs-16">أبل باي</h2>
+      <img src="../../../assets/img/icon/ApplePay.svg" alt="payment">
+    </div>
+    <div class="ion-display-flex ion-justify-content-between ion-align-items-center atm">
+      <h2 class="fw-regular text-dark m-0 fs-16">بطاقة مدى</h2>
+      <img src="../../../assets/img/icon/mada.svg" alt="payment">
+    </div>
+    <div class="ion-display-flex ion-justify-content-between ion-align-items-center atm">
+      <h2 class="fw-regular text-dark m-0 fs-16">سداد</h2>
+      <img src="../../../assets/img/icon/sadad.svg" alt="payment">
+    </div>
+    </div>
+      <h2 class="text-primary fw-bold fs-16 h2-with-icon pading-10">
+      <img src="../../../assets/img/icon/dataflow-03.svg" alt="dataflow">
+       أوقسط بدون فوائد عبر :
+    </h2>
+   <div class="payment-methods ion-display-flex ion-justify-content-center ion-align-items-center gap-10">
+    <div class="tabby">
+      <img src="../../../assets/img/icon/tamara.svg" alt="tabby">
+    </div>
+     <div class="tabby">
+      <img src="../../../assets/img/icon/tabby.svg" alt="tabby">
+    </div>
+   </div>
+   
+   
+   
+  </div>
+  <!-------modal-------->
+  <ion-modal trigger="pay-modal" #modal [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar class="ion-text-center">
+          <ion-title class="text-primary fw-black fs-20 pading-10">
+            <div class="title-flex ion-text-center">
+              <img src="../../../assets/img/icon/credit-card-plus.svg" alt="credit">
+              <span>إضافة بطاقة إئتمانية</span>
+            </div>
+          </ion-title>
+          <!-- <ion-buttons slot="end">
+            <ion-button onclick="this.closest('ion-modal').dismiss()">إغلاق</ion-button>
+          </ion-buttons> -->
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="card-inputs ion-display-flex ion-flex-column gap-10 pi-10">
+          <ion-input class="custom-input fw-regular fs-16 text-darkblue" placeholder="رقم البطاقة">
+          </ion-input>
+          <ion-input class="custom-input fw-regular fs-16 text-darkblue" placeholder="إسم حامل البطاقة">
+          </ion-input>
+          <div class="ion-display-flex ion-justify-content-center gap-10">
+            <ion-input class="custom-input fw-regular fs-16 text-darkblue" placeholder="cvv">
+            </ion-input>
+            <ion-input class="custom-input fw-regular fs-16 text-darkblue" placeholder="تاريخ الانهاء">
+            </ion-input>
+          </div>
+          <div class="checkbox-row pading-10">
+            <ion-checkbox class="custom-check"></ion-checkbox>
+            <span class="text-primary fw-regular fs-16">البطاقة الأفتراضية للدفع</span>
+          </div>
+          <div class="btn-row">
+            <ion-button  (click)="openmodal()" expand="block" class="btn-orange fw-SemiBold">
+              <img src="../../../assets/img/icon/check.svg" alt="check" class="pe-10">
+              موافق
+            </ion-button>
+           
+            <ion-button fill="outline" (click)="modal.dismiss()" class="btn-outline fw-SemiBold">
+              إلغاء
+            </ion-button>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+     <!-------modal-------->
+</ion-content>

@@ -1,0 +1,53 @@
+body{
+  background-color: #ffffff;
+}
+.h2-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+.text-cost{
+  margin: 40px 0;
+  background-color: #FBF3EF !important;
+  padding: 10px;
+  border-radius: 10px;
+}
+.discount{
+  background-color: #F0F3F8;
+   padding: 16px 0;
+  border-radius: 10px;
+}
+/*----------------------*/
+.discount-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #CDD3DD;
+  border-radius: 8px;
+ 
+
+  ion-input {
+    flex: 1;
+    --padding-start: 10px;
+    --padding-end: 10px;
+  }
+
+  .apply-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     --background: transparent; 
+  --color: #FF7A00;          
+  --box-shadow: none;
+  }
+}
+.bottom-button{
+ margin-top: 20%;
+}
+.bottom-button  {
+  --background: #009554 !important;
+  --color: #fff;
+  --border-radius: 10px;
+  min-height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+}

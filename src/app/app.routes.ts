@@ -58,5 +58,13 @@ export const routes: Routes = [
     path: 'consultant',
     loadChildren: () =>
       import('./consultant/tabs/tabs.routes').then(m => m.routes)
+  },
+  {
+    path: 'service-costs',
+    loadComponent: () => import('./features/service-costs/service-costs.page').then( m => m.ServiceCostsPage)
+  },
+  {
+    path: 'order-payment',
+    loadComponent: () => import('./features/order-payment/order-payment.page').then( m => m.OrderPaymentPage)
   }
 ];

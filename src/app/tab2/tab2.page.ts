@@ -6,6 +6,9 @@ import { MenuService } from '../../app/core/services/menu';
 import { ModalController } from '@ionic/angular/standalone';
 import { ProgramDetailsComponent } from 'src/app/features/program-details/program-details.component';
 import { HeaderComponent } from "src/app/shared/header/header.component";
+import { ViewChild } from '@angular/core';
+import { IonModal } from '@ionic/angular/standalone';
+
 
 @Component({
   selector: 'app-tab2',
@@ -51,5 +54,10 @@ openSearch() {
 
 closeSearch() {
   this.isSearchOpen = false;
+}
+@ViewChild('myModal') modal!: IonModal;
+
+closeModal() {
+  this.modal.dismiss();
 }
 }

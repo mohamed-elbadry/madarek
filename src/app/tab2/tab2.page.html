@@ -16,11 +16,8 @@
       </ion-label>
     </ion-segment-button>
   </ion-segment>
-
-
   <ion-list>
     <div class="search-container">
-
   <!-- الجزء الافتراضي search-select -->
   <div  [style.display]="isSearchOpen ? 'none' : 'flex'" class=" ion-align-items-center gap-10 search-select">
     <div class="p-2 ion-display-flex ion-align-items-center custom-select-wrapper" id="open-modalsearch">
@@ -34,7 +31,6 @@
       <img src="../../../../assets/img/icon/search-sm-orange.svg">
     </div>
   </div>
-
   <!-- البحث يظهر فقط عند true -->
   <ion-searchbar
     *ngIf="isSearchOpen"
@@ -44,14 +40,11 @@
     value="ابحث هنا"
     class="search-programm">
   </ion-searchbar>
-
 </div>
-
-
   </ion-list>
+
   <div class="p-10">
     <div class="card">
-      
        <ion-card-title class="fw-bold" (click)="openmodel()"> دورة الإقناع الفعال وتعلم كيفية التأثير بإيجابية في الآخرين</ion-card-title>
       <p class="truncate-text fw-regular">
         اكتشف أسرار الإقناع الفعال وتعلم كيفية التأثير <br>بإيجابية في الآخرين من خلال هذه الدورة الشاملة<br> والعملية.
@@ -60,13 +53,11 @@
         مهنية
         قوية باستخدام الأدوات الرقمية والتقليدية
       </p>
-
       <ion-badge class="fw-medium bg-badge p-badge ion-display-inline-flex ion-align-items-center gap-5"
         (click)="openmodel()">
         <img src="../../assets/img/icon/chart-breakout-circle.svg" alt="">
         دورة تدريبية
       </ion-badge>
-
       <div class="text ion-display-flex ion-align-items-center fw-regular text-dark fs-14 gap-10 pb-10 mt-8">
       <span class="ion-display-flex ion-align-items-start"> <img src="../../assets/img/icon/bank-note.svg" alt="bank-note" class="pe-5 pt-2">  السعر :</span>
       <span class="text-decoration"> 2500 </span>
@@ -93,9 +84,183 @@
       </div>
     </div>
     
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="fw-bold" (click)="openmodel()">تقنيات تحسين التركيز في عالم الأعمال</ion-card-title>
+        <ion-card-subtitle class="truncate-text fw-regular">ستراتيجيات عملية لتعزيز التركيز والإنتاجية في بيئة العمل
+          الحديثة.
+          يغطي تقنيات مثل طريقة بومودورو
+          وإدارة الإشعارات، وتصميم مساحة عمل محفزة للتركيز أهمية التواصل المهني في العصر الحالي ويقدم نصائح
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-badge class="fw-medium bg-book p-badge ion-display-inline-flex ion-align-items-center gap-5"
+          (click)="openmodel()">
+          <img src="../../assets/img/icon/book-open-02.svg" alt="book">
+          كتاب
+        </ion-badge>
+        <div class="text ion-display-flex ion-align-items-center fw-regular text-dark fs-14 gap-10 pb-10 mt-8">
+      <span class="ion-display-flex ion-align-items-start"> <img src="../../assets/img/icon/bank-note.svg" alt="bank-note" class="pe-5 pt-2">  السعر :</span>
+      <span class="text-decoration"> 2500 </span>
+       <span class="text-secondery">2000</span>
+      <span> ريال سعودي</span>
+    </div>
+        <div class="star ion-display-flex ion-align-items-center gap-10">
+          <p class="fw-regular">تقييم المشتركين :</p>
+          <div class="image ion-display-flex ion-align-items-center gap-5">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+          </div>
+        </div>
+        <div class="avatar ion-display-flex ion-align-items-center gap-10">
+          <img src="../../assets/img/home/Avatar-4.png" alt="avatar">
+          <div class="ion-display-flex ion-flex-column ion-align-items-center gap-5">
+            <h2 class="fw-black">أ.نورة الشمري<img class="pad-10" src="../../assets/img/icon/verified.svg"
+                alt="verified"></h2>
+            <p class="fw-regular">خبيرة في مجال الاتصال والإقناع</p>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
 
-   
+    <ion-card>
+      <img alt="Silhouette of mountains" class="image-head" src="../../assets/img/home/Frame 20.png" />
+      <ion-card-header>
+        <ion-card-title class="fw-bold" (click)="openmodel()">العروض التقديمية للمستثمرين</ion-card-title>
+        <ion-card-subtitle class="truncate-text fw-regular">
+          استراتيجيات عملية لتعزيز التركيز والإنتاجية في بيئة العمل الحديثة. يغطي تقنيات مثل طريقة بومودورو
+          وإدارة الإشعارات، وتصميم مساحة عمل محفزة للتركيز أهمية التواصل المهني في العصر الحالي ويقدم نصائح حول كيفية
+          بناء
+          وصيانة شبكة علاقات مهنية قوية باستخدام الأدوات الرقمية والتقليدية
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-badge class="fw-medium bg-video p-badge ion-display-inline-flex ion-align-items-center gap-5"
+          (click)="openmodel()">
+          <img src="../../assets/img/icon/video-recorder.svg" alt="chart-breakout">
+          فيديو
+        </ion-badge>
+        <div class="text ion-display-flex ion-align-items-center fw-regular text-dark fs-14 gap-10 pb-10 mt-8">
+      <span class="ion-display-flex ion-align-items-start"> <img src="../../assets/img/icon/bank-note.svg" alt="bank-note" class="pe-5 pt-2">  السعر :</span>
+      <span class="text-decoration"> 10500 </span>
+       <span class="text-secondery">9700</span>
+      <span> ريال سعودي</span>
+    </div>
+        <div class="star ion-display-flex ion-align-items-center gap-10">
+          <p class="fw-regular">تقييم المشتركين :</p>
+          <div class="image ion-display-flex ion-align-items-center gap-5">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+          </div>
+        </div>
+        <div class="avatar ion-display-flex ion-align-items-center gap-10">
+          <img src="../../assets/img/home/Avatar-7.png" alt="avatar">
+          <div class="ion-display-flex ion-flex-column  gap-5">
+            <h2 class="fw-black">أ.نورة الشمري<img class="pad-10" src="../../assets/img/icon/verified.svg"
+                alt="verified"></h2>
+            <p class="fw-regular">خبيرة في مجال الاتصال والإقناع</p>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+     <ion-card>
+      <ion-card-header>
+        <ion-card-title class="fw-bold" (click)="openmodel()">تعزيز المشاركة والرضا الوظيفي</ion-card-title>
+        <ion-card-subtitle class="truncate-text fw-regular">
+          استراتيجيات عملية لتعزيز التركيز والإنتاجية في بيئة العمل الحديثة. يغطي تقنيات مثل طريقة بومودورو
+          وإدارة الإشعارات، وتصميم مساحة عمل محفزة للتركيز أهمية التواصل المهني في العصر الحالي ويقدم نصائح حول كيفية
+          بناء
+          وصيانة شبكة علاقات مهنية قوية باستخدام الأدوات الرقمية والتقليدية
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <ion-badge class="fw-medium bg-badge p-badge ion-display-inline-flex ion-align-items-center gap-5"
+          (click)="openmodel()">
+          <img src="../../assets/img/icon/chart-breakout-circle.svg" alt="">
+          دورة تدريبية
+        </ion-badge>
+        <div class="text ion-display-flex ion-align-items-center fw-regular text-dark fs-14 gap-10 pb-10 mt-8">
+          <span class="ion-display-flex ion-align-items-start"> <img src="../../assets/img/icon/bank-note.svg" alt="bank-note"
+              class="pe-5 pt-2"> السعر :</span>
+          <span class="text-decoration"> 10500 </span>
+          <span class="text-secondery">9700</span>
+          <span> ريال سعودي</span>
+        </div>
+        <div class="star ion-display-flex ion-align-items-center gap-10">
+          <p class="fw-regular">تقييم المشتركين :</p>
+          <div class="image ion-display-flex ion-align-items-center gap-5">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+            <img src="../../assets/img/icon/Star 4.svg" alt="star">
+          </div>
+        </div>
+        <div class="avatar ion-display-flex ion-align-items-center gap-10">
+          <img src="../../assets/img/home/Avatar-2.png" alt="avatar">
+          <div class="ion-display-flex ion-flex-column gap-5">
+            <h2 class="fw-black">أ. فيصل القحطاني<img class="pad-10" src="../../assets/img/icon/verified.svg"
+                alt="verified"></h2>
+            <p class="fw-regular">ماجستير علم النفس التطبيقي والتدريب والتطوير</p>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
   </div>
   
+  <!---------modal---------->
+  <ion-modal #myModal trigger="open-modalsearch" [initialBreakpoint]="0.7" [breakpoints]="[0, 0.25,0.7]">
+    <ng-template>
+      <ion-header class="ion-text-center">
+        <h2 class="text-primary fw-black fs-20">
+          <img src="../../../assets/img/icon/target-04.svg" alt="target">
+          الأرشاد الشخصي
+        </h2>
+      </ion-header>
+      <ion-content [fullscreen]="true">
+        <ion-list>
+          <ion-item>
+            <ion-checkbox slot="start"></ion-checkbox>
+            <span class="fw-regular fs-16 text-dark">مهارات القيادة الشخصية</span>
+            <span slot="end" class="fw-regular fs-16 text-fifth">49 مادة</span>
+          </ion-item>
+          <ion-item>
+            <ion-checkbox slot="start"></ion-checkbox>
+            <span class="fw-regular fs-16 text-dark">الإقناع والتأثير</span>
+            <span slot="end" class="fw-regular fs-16 text-fifth">104 مادة</span>
+          </ion-item>
+          <ion-item>
+            <ion-checkbox slot="start"></ion-checkbox>
+            <span class="fw-regular fs-16 text-dark">إدارة الوقت والإنتاجية</span>
+            <span slot="end" class="fw-regular fs-16 text-fifth">38 مادة</span>
+          </ion-item>
+          <ion-item>
+            <ion-checkbox slot="start"></ion-checkbox>
+            <span class="fw-regular fs-16 text-dark">الذكاء العاطفي </span>
+            <span slot="end" class="fw-regular fs-16 text-fifth">77 مادة</span>
+          </ion-item>
+          <ion-item>
+            <ion-checkbox slot="start"></ion-checkbox>
+            <span class="fw-regular fs-16 text-dark">التواصل الفعال </span>
+            <span slot="end" class="fw-regular fs-16 text-fifth">157 مادة</span>
+          </ion-item>
+        </ion-list>
+        <div class="right-button pi-10">
+          <button class="btn-white fw-medium fs-14 ok" (click)="myModal.dismiss()"><img src="../../assets/img/icon/check.svg"
+              class="pe-10">موافق</button>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
   <!-----------modal-------------->
 </ion-content>

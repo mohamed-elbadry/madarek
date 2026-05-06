@@ -480,12 +480,12 @@ ion-tab-bar {
       padding-bottom: env(safe-area-inset-bottom)!important; ;
 
 }
-@media only screen and (min-width: 768px) and (min-height: 768px) {
-    ion-modal {
-        --width: 100%;
-        --height: 100%;
-    }
-}
+// @media only screen and (min-width: 768px) and (min-height: 768px) {
+//     ion-modal {
+//         --width: 100%;
+//         --height: 100%;
+//     }
+// }
 .native-input .sc-ion-input-md{
     border: none !important;
 }
@@ -578,52 +578,7 @@ ion-toast.custom-toast {
     box-shadow: none !important;
 }
 
-.modal-content {
-  --background: #fff;
-}
 
-.modal-content .modal-box {
-  display: flex;
-  flex-direction: column;
-    
-  justify-content: center;
- 
-  padding: 20px;
-  gap: 10px;
-}
-.modal-content .modal-image {
- margin: 20px auto;
-  object-fit: contain;
-  display: block;
-}
-
-
-.modal-content .btn-orange {
-  --background: #E4541B;
-  --border-radius: 12px;
-  --border:none !important;
-}
-.modal-content .btn-outline-custom {
-  --background: transparent;        /* مفيش باكجراوند */
-  --color: #000;                    /* لون النص */
-  --border-color: #D3D7DE;          /* لون البوردر */
-  --border-width: 1px;
-  --border-style: solid;
-  --border-radius: 12px;            /* لو عايزه مدور */
-}
-.modal-content .label-with-line {
-  position: relative;
-  padding-inline-start: 16px; /* مساحة بين الخط والـ label */
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0px;    /* المسافة بين الـ avatar والخط */
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background-color: #CDD3DD;
-  }
-}
 
 .checkbox-row ion-checkbox{
   --border-color: #CDD3DD;
@@ -640,4 +595,55 @@ ion-toast.custom-toast {
 }
 .ion-valid.sc-ion-input-otp-md-h{
     --highlight-color: var(--main-orange) !important;
+}
+
+ion-modal.notice-sheet-modal {
+  --height: auto;
+  --max-height: 90%;
+  --border-radius: 20px !
+  important;
+
+  align-items: flex-end !important;
+}
+ .modal-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  justify-content: center;
+ 
+  padding: 20px;
+  gap: 10px;
+}
+ .modal-image {
+ margin: 20px auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+ .btn-orange {
+  --background: #E4541B;
+  --border-radius: 12px;
+  --border:none !important;
+}
+ .btn-outline-custom {
+  --background: transparent;        /* مفيش باكجراوند */
+  --color: #000;                    /* لون النص */
+  --border-color: #D3D7DE;          /* لون البوردر */
+  --border-width: 1px;
+  --border-style: solid;
+  --border-radius: 12px;            /* لو عايزه مدور */
+}
+ .label-with-line {
+  position: relative;
+  padding-inline-start: 16px; /* مساحة بين الخط والـ label */
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0px;    /* المسافة بين الـ avatar والخط */
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #CDD3DD;
+  }
 }
