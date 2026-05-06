@@ -51,7 +51,18 @@ export class AuthGuard implements CanActivate {
 
       return true;
     }
+if (type === 'auth') {
 
+  if (!this.authservice.isGuestUser()) {
+
+    // فتح المودال
+    this.authservice.openLoginModal();
+
+    return false; // يمنع الدخول
+  }
+
+  return true;
+}
     // 🚫 أي حالة غير معروفة
     this.router.navigate(['/']);
     return false;

@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-
+import { LoginModalComponent } from 'src/app/features/login/modal/modal.component';
+import { ModalController } from '@ionic/angular/standalone';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  constructor(private modalCtrl: ModalController) { }
   // 📱 رقم الموبايل
   private phone: string = '';
 
@@ -51,6 +53,18 @@ export class AuthService {
 
   isGuestUser(): boolean {
     return JSON.parse(localStorage.getItem('isGuest') || 'false');
+  }
+ async openLoginModal() {
+    const modal = await this.modalCtrl.create({
+      component: LoginModalComponent,
+      cssClass: 'login-sheet-modal',
+      initialBreakpoint: 0.5,
+      breakpoints: [0, 0.5, 1],
+      backdropBreakpoint: 0.3,
+      handle: true
+    });
+
+    await modal.present();
   }
 
   // 🧹 (اختياري مهم) تسجيل خروج / Reset

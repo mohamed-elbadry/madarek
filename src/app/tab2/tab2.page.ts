@@ -8,6 +8,8 @@ import { ProgramDetailsComponent } from 'src/app/features/program-details/progra
 import { HeaderComponent } from "src/app/shared/header/header.component";
 import { ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular/standalone';
+import { LoginModalComponent } from '../features/login/modal/modal.component';
+import { AuthService } from '../core/services/auth';
 
 
 @Component({
@@ -38,12 +40,15 @@ import { IonModal } from '@ionic/angular/standalone';
 ]
 })
 export class Tab2Page implements OnInit {
+  [x: string]: any;
 
   presentingElement!: HTMLElement;
 
   constructor(
      private menuService: MenuService,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+  
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -58,9 +63,29 @@ export class Tab2Page implements OnInit {
     await modal.present();
   }
 
-  openMenu() {
-    this.menuService.openMenu();
-  }
+  async openMenu() {
+ 
+     // 👇 Guest → Modal
+     if (this.authService.isGuestUser()) {
+ 
+       this.menuService.openMenu();
+       console.log('Is Guest User menu:', this.authService.isGuestUser());
+ 
+     } else {
+ 
+       const modal = await this.modalCtrl.create({
+         component: LoginModalComponent,
+         cssClass: 'login-sheet-modal',
+       initialBreakpoint: 0.5,
+     breakpoints: [0, 0.5, 1],
+     backdropBreakpoint: 0.3,
+     handle: true
+       });
+ 
+       await modal.present();
+       console.log('Is Guest User:', this.authService.isGuestUser());
+     }
+   }
 isSearchOpen = false;
 
 openSearch() {

@@ -151,10 +151,10 @@ ion-modal::part(content) {
 }
 
 .custom-check {
-  /* لون الخلفية لما يبقى متعلم */
   --checkbox-background-checked: #5b220b;
-  --border-color: #5b220b;               /* لون البوردر */
-  --checkmark-color: #fff;               /* لون علامة الصح */
+  --border-color: #5b220b;
+  --border-color-checked: #5b220b; /* 🔥 دي المهمة */
+  --checkmark-color: #fff;
 }
 
 .card-inputs ion-input{

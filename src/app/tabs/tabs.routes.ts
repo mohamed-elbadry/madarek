@@ -22,6 +22,9 @@ export const routes: Routes = [
         path: 'tab3',
         loadComponent: () =>
           import('../tab3/tab3.page').then((m) => m.Tab3Page),
+          canActivate: [AuthGuard],
+           data: { type: 'auth' }
+
       },
       {
         path: '',

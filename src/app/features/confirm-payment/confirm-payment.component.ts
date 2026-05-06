@@ -14,7 +14,8 @@ export class ConfirmPaymentComponent  implements OnInit {
 
   ngOnInit() {}
   closemodal() {
-    return this.modalCtrl.dismiss();
+    this.modalCtrl.dismiss();
+   this.router.navigate(['/tabs', 'tab1']);
   }
   gotrening(){
     this.modalCtrl.dismiss();

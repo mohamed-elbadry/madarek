@@ -87,8 +87,12 @@ export class HeaderComponent implements OnInit {
   // await this.closeAllModals();
         const modal = await this.modalctrl.create({
           component: LoginModalComponent,
-          cssClass: 'modal-content'
-        });
+          cssClass: 'login-sheet-modal',
+      initialBreakpoint: 0.5,
+    breakpoints: [0, 0.5, 1],
+    backdropBreakpoint: 0.3,
+    handle: true
+      });
   
         await modal.present();
         console.log('Is Guest User:', this.authService.isGuestUser());
