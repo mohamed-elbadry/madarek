@@ -19,7 +19,7 @@ import { IonModal } from '@ionic/angular/standalone';
     CommonModule,
     FormsModule,
     IonicModule,
-    HeaderComponent
+    HeaderComponent,
 ]
 })
 export class Tab2Page implements OnInit {

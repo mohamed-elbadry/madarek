@@ -66,5 +66,9 @@ export const routes: Routes = [
   {
     path: 'order-payment',
     loadComponent: () => import('./features/order-payment/order-payment.page').then( m => m.OrderPaymentPage)
+  },
+  {
+    path: 'trainning',
+    loadComponent: () => import('./tab3/trainning/trainning.page').then( m => m.TrainningPage)
   }
 ];

@@ -1,0 +1,161 @@
+.edit-header{
+    background-color: #fff;
+    padding: 10px;
+}
+.card.right{
+  background-color: #0E9384;
+  color: #fff;
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: right;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card.right span{
+    display: flex;
+}
+.text h2,
+.text h3,
+.text h4,
+.text h5, 
+.text p{
+ color: #061B42;
+ font-size: 12px;
+ font-weight: 400;
+}
+.text h3{
+  text-decoration: line-through;
+}
+.text h4{
+  color: #009554;
+}
+.card-text p,
+.card-text h2{
+    margin: 5px !important;
+}
+.list {
+  position: relative;
+}
+.list.ready::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  height: 2px;
+  left: 0;
+  width: 100%;
+  background: #EAECF0; 
+}
+
+
+.butoon ion-button {
+  --border-color: #D3D7DE;
+  border-radius: 10px !important;
+}
+ion-button{
+    width: 100%;
+    height: 48px;
+    --border-radius: 10px !important;
+}
+.btn-orange{
+  --background: #E4541B;
+  --color: #fff;
+  --box-shadow: none;
+}
+
+.btn-outline{
+  --border-color: #EF9876;
+  --color: #EF9876;
+   white-space: nowrap;
+}
+
+
+/* حاوية الأزرار عمودية مع مسافة 10px بينهم */
+.attached-files {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px; 
+ 
+}
+
+/* شكل كل زر */
+.file-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;          /* المسافة بين الصورة والنص */
+  border: 1px solid #D3D7DE;
+   background-color: #f6f7f9;
+  padding: 8px 12px;
+  border-radius: 6px; /* اختياري لتنعيم الحواف */
+  cursor: pointer;
+  text-align: left;
+}
+
+/* إزالة ال padding الافتراضي لل h2 داخل الزر */
+.file-btn h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+.star {
+  width: 40px;
+  height: 40px;
+  
+}
+
+
+.stars-wrapper {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.stars-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  left: 0;
+  width: 100%;
+  background: #EAECF0; 
+}
+.custom-textarea {
+  margin-top: 15px;
+  background: #FFF; 
+  border-radius: 10px;
+  padding: 10px 15px;
+ border: 1px solid #CDD3DD;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  --highlight-color-focused: none;
+}
+.submit-wrapper {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  width: 100%;
+  background: #FFF3ED; 
+  border: 1px solid red;
+  border-radius: 10px;
+  color: #E4541B; 
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Vazirmatn-extrabold';
+}
+.submit-btn:hover {
+  opacity: 0.9;
+}
+.arrow {
+  filter: invert(38%) sepia(87%) saturate(6282%) hue-rotate(10deg) brightness(95%) contrast(95%);
+}
+

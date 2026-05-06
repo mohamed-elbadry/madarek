@@ -50,7 +50,15 @@ body{
   --background-activated: #fff;
 }
 ion-list{
-    padding: 10px 20px;
+   padding-inline-end:20px !important;
+   padding-inline-start:20px !important;
+   padding-top: 10px !important;
+padding-bottom: 10px !important;
+
+}
+ion-list {
+  --padding-start: 20px;
+  --padding-end: 20px;
 }
 .custom-select-item {
     width: 100%;

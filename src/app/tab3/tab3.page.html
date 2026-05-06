@@ -1,17 +1,110 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+  <app-header [title]="'سجلي التدريبي'" [gobackbtn]="true"></app-header>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content [fullscreen]="true" class="pi-10">
+  
+     <ion-segment value="personal" class="custom-segment ">
+      <ion-segment-button value="personal">
+        <ion-label class="fw-medium fs-14">
+          جديد
+        </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="business">
+        <ion-label class=" fw-medium fs-14">
+          فعال
+        </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="complete">
+        <ion-label class="fw-medium fs-14">
+          مكتمل
+        </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Canceled">
+        <ion-label class=" fw-medium fs-14">
+          ملغي
+        </ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  
+   
+<ion-card>
+  <div class="pading-15">
+     <ion-badge class="fw-medium bg-video p-badge ion-display-inline-flex ion-align-items-center gap-5 pading-10">
+      <img src="../../assets/img/icon/video-recorder.svg" alt="chart-breakout">
+     فيديو
+    </ion-badge>
+  </div>
+  <ion-card-header>
+    <ion-card-title class="fw-bold fs-18">سلسلة قوة العادات الذكية</ion-card-title>
+   <div class="avatar ion-display-flex ion-align-items-center gap-10">
+    <img src="../../assets/img/home/Avatar-3.png" alt="avatar">
+    <div class="ion-display-flex ion-flex-column gap-5">
+      <h2 class="fw-black fs-14">د.   معتز عبد الخالق<img class="pad-10" src="../../assets/img/icon/verified.svg" alt="verified"></h2>
+      <p class="fw-regular">مدير مركز الدراسات الاسترايجية بجامعة كارديف</p>
+    </div>
+   </div>
+  </ion-card-header>
+  <ion-card-content>
+   <div class="ion-display-flex gap-5">
+    <img src="../../../assets/img/icon/pie-chart-01.svg" alt="pie-chart">
+    <p class="text-primary fw-regular fs-14">نسبة الاكتمال :<span class="fw-bold">12%</span></p>
+   </div>
+   <!-- <div class="progress-bar">
+    <div class="progress"></div>
+   </div> -->
+   <ion-progress-bar [value]="progressone"></ion-progress-bar>
+    <div class="text ion-display-flex ion-align-items-center fw-regular gap-10 pading-10">
+      <img src="../../assets/img/icon/calendar-check-01.svg" alt="calendar-check">
+      <h2 class="fw-regular fs-14">موعدك القادم</h2>
+      
+    </div>
+    
+    <p class="fw-bold text-primary">غداً 15 أغسطس 2024 الساعة 2:00 مساءً</p>
+    <div class="star ion-display-flex ion-align-items-center gap-10 pading-10">
+    <ion-button class="orang fw-SemiBold">حضور الجلسة</ion-button>
+    <ion-button color="light" class="light fw-SemiBold" (click)="goToTraining()">
+  التفاصيل
+</ion-button>
+    </div>
+  </ion-card-content>
+ 
+</ion-card>
+<ion-card>
+  <div class="pading-15">
+    <ion-badge class="fw-medium bg-badge p-badge ion-display-inline-flex ion-align-items-center gap-5">
+      <img src="../../assets/img/icon/chart-breakout-circle.svg" alt="">
+       دورة تدريبية
+    </ion-badge>
+  </div>
+  <ion-card-header>
+    <ion-card-title class="fw-bold fs-18">دورة الإقناع الفعال وتعلم كيفية التأثير بإيجابية في الآخرين</ion-card-title>
+     <div class="avatar ion-display-flex ion-align-items-center gap-10">
+    <img src="../../assets/img/home/Avatar.png" alt="avatar">
+    <div class="ion-display-flex ion-flex-column gap-5">
+      <h2 class="fw-black fs-14">د.  لمي الصالح<img class="pad-10" src="../../assets/img/icon/verified.svg" alt="verified"></h2>
+      <p class="fw-regular">أستاذ اقتصاد الأسواق الناشئة</p>
+    </div>
+   </div>
+  </ion-card-header>
+   <ion-card-content>
+   <div class="ion-display-flex gap-5">
+    <img src="../../../assets/img/icon/pie-chart-01.svg" alt="pie-chart">
+    <p class="text-primary fw-regular fs-14">نسبة الاكتمال :<span class="fw-bold">82%</span></p>
+   </div>
+   <ion-progress-bar [value]="progress"></ion-progress-bar>
+   <!-- <div class="progress-bar">
+    <div class="progress next"></div>
+   </div> -->
+    <div class="text ion-display-flex ion-align-items-center fw-regular gap-10 pading-10">
+      <img src="../../assets/img/icon/calendar-check-01.svg" alt="calendar-check">
+      <h2 class="fw-regular fs-14">موعدك القادم</h2>
+    </div>
+    <p class="fw-bold text-primary">24 أغسطس 2024 الساعة 6:00 مساءً</p>
+    <div class="star ion-display-flex ion-align-items-center gap-10 pading-10">
+  <ion-button color="light" class="light fw-SemiBold" [routerLink]="['/trainning']">
+    التفاصيل
+  </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>
 </ion-content>

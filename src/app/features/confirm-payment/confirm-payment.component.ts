@@ -18,6 +18,6 @@ export class ConfirmPaymentComponent  implements OnInit {
   }
   gotrening(){
     this.modalCtrl.dismiss();
-    this.router.navigate(['/tabs/tab3'])
+   this.router.navigate(['/tabs', 'tab3']);
   }
 }

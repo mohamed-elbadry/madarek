@@ -1,0 +1,186 @@
+
+
+
+ion-card .image-head{
+   width: 100%;
+   height: 200px;
+   border-top-left-radius: 10px; 
+   border-top-right-radius: 10px; 
+}
+ion-card-content .cours .red{
+   background-color: #E10000;
+  width: 100px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+
+
+ion-button.light{
+  -webkit-box-shadow: none !important;
+  --box-shadow: none !important;
+  --background-hover: none !important;
+ --border-radius: 10px !important;
+  height: 44px;
+--background-hover-opacity: 0;
+  --border-width: 1px;
+    --border-color: #D3D7DE;
+    --border-style: solid;
+}
+/* ===== Course Card ===== */
+
+ion-card{
+  border: 1px solid #EAECF0;
+  box-shadow: 0px 0px 2px 0px rgba(16, 24, 40, 0.05);
+  border-radius: 20px;
+  padding: 0;
+  margin-bottom: 20px;
+ 
+}
+
+/* صورة الكارد */
+
+
+/* الجزء اللي فوق (فيديو + عدد الجلسات) */
+ion-card .right{
+  padding-inline: 10px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* badge الفيديو */
+ion-card .right .cours{
+  background-color: #0E9384;
+  color: #fff;
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+ion-card .cours.red{
+  background-color: #E10000 !important;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  color: #fff;
+}
+.book-card .right .cours.book{
+  background-color: #CB9E00 !important;
+ 
+  border-radius: 20px;
+}
+/* عدد الدقائق */
+ion-card .minute{
+  font-size: 12px;
+  color: #333333;
+  margin: 0;
+}
+
+/* العنوان */
+ion-card-title{
+  font-size: 18px;
+  color: #E4541B;
+  line-height: 24px;
+  text-align: right;
+  margin: 0;
+}
+
+/* الوصف */
+ion-card-subtitle{
+  font-size: 14px;
+  color: #061B42;
+  line-height: 24px;
+  text-align: right;
+}
+
+/* السعر */
+.text h2,
+.text h3,
+.text h4,
+.text p{
+  color: #061B42;
+  font-size: 14px;
+}
+
+.text h3{
+  text-decoration: line-through;
+}
+
+.text h4{
+  color: #009554;
+}
+
+/* التقييم */
+.star ion-button{
+  width: 100%;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  --box-shadow: none;
+}
+.avatar {
+  margin: 16px 0 0px !important;
+}
+
+.avatar h2,
+.avatar p{
+  color: #061B42;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.avatar p{
+  font-size: 12px;
+}
+
+/*-----------progress--------------*/
+.progress-bar{
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  position: relative;
+  border-radius: 10px;
+}
+.progress{
+  width: 12%;
+  background-color: #00BA69 !important;
+  height: 100%;
+  border-radius: 10px;
+}
+.progress.next{
+  width: 82%;
+  background-color: #00BA69 !important;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.custom-segment {
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    overflow-x: auto;
+    padding-inline: 20px;
+   
+}
+ion-progress-bar{
+  --background: transparent;
+    --progress-background: #00BA69;
+    display: block;
+    position: relative;
+    width: 100%;
+    contain: strict;
+    direction: rtl;
+    overflow: hidden;
+    transform: scaleX(-1);
+    height: 12px;
+    border: 1px solid #D3D7DE;
+    border-radius: 120px;
+}
+
+@media (max-width: 576px){
+.custom-segment {
+    padding-right: 70px;
+}
+}
