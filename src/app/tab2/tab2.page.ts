@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { MenuService } from '../../app/core/services/menu';
-import { ModalController } from '@ionic/angular/standalone';
+import { ModalController, IonSearchbar, IonCardTitle, IonBadge, IonCard, IonCardHeader, IonCardSubtitle, IonCardContent, IonHeader, IonContent, IonList, IonCheckbox, IonItem, IonSegment, IonSegmentButton, IonLabel } from '@ionic/angular/standalone';
 import { ProgramDetailsComponent } from 'src/app/features/program-details/program-details.component';
 import { HeaderComponent } from "src/app/shared/header/header.component";
 import { ViewChild } from '@angular/core';
@@ -18,8 +18,23 @@ import { IonModal } from '@ionic/angular/standalone';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
     HeaderComponent,
+    IonSearchbar,
+    IonCardTitle,
+    IonBadge,
+    IonCard,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardContent,
+    IonModal,
+    IonHeader,
+    IonContent,
+    IonList,
+    IonCheckbox,
+    IonItem,
+    IonSegment,
+    IonSegmentButton,
+    IonLabel
 ]
 })
 export class Tab2Page implements OnInit {

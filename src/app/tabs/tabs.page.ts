@@ -20,6 +20,12 @@ export class TabsPage {
 
   constructor(public menuService: MenuService, private modalCtrl: ModalController, private router: Router,private authService: AuthService) {}
 
+
+
+
+
+
+
 async openTab3(ev: Event) {
   ev.preventDefault();
   ev.stopPropagation(); // 🔥 دي مهمة جدًا
@@ -35,6 +41,7 @@ if (this.authService.isGuestUser()) {
     handle: true
     });
     await modal.present();
+    
   }
 }
 

@@ -3,7 +3,6 @@ ion-tab-bar {
   padding-inline: 20px;
   --border: none !important;
 }
-
 ion-tab-button {
   position: relative;
 }
@@ -12,10 +11,7 @@ ion-tab-bar ion-tab-button.tab-selected {
     border-bottom: 4px solid  #E4541B;
     background: #FBF3EF;
     font-weight: 900;
-
 }
-
-
 ion-tab-button.tab-selected ion-label {
   color: #E4541B;
 }
