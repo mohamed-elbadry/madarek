@@ -54,6 +54,35 @@ export class MenuComponent implements OnInit {
   // تقفل المينيو بعد ما يفتح
   this.menuService.closeMenu();
 }
+ async goToTab() {
+  try {
+    await this.modalCtrl.dismiss();
+  } catch (e) {
+    // ignore error if no overlay
+  }
+  this.menuService?.closeMenu?.();
+  this.router.navigateByUrl('/tabs/tab1');
+}
+
+async goToTabtwo() {
+  try {
+    await this.modalCtrl.dismiss();
+  } catch (e) {
+    // ignore error if no overlay
+  }
+  this.menuService?.closeMenu?.();
+  this.router.navigateByUrl('/tabs/tab2');
+}
+
+async goToTabthree() {
+  try {
+    await this.modalCtrl.dismiss();
+  } catch (e) {
+    // ignore error if no overlay
+  }
+  this.menuService?.closeMenu?.();
+  this.router.navigateByUrl('/tabs/tab3');
+}
   logout() {
     this.authService.logout();
     this.menuService.closeMenu();

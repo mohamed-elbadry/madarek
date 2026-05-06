@@ -101,7 +101,40 @@
       <img src="../../../assets/img/icon/Stars.svg" alt="stars">
       <img src="../../../assets/img/icon/Stars.svg" alt="stars">
     </div> -->
-<div class="stars-wrapper">
+
+    <div class="stars-wrapper">
+
+  <div class="ion-display-flex ion-text-center ion-align-items-center ion-justify-content-center gap-10">
+
+    <img 
+      *ngFor="let star of [1,2,3,4,5]" 
+      (click)="setRating(star)"
+      [src]="star <= selectedRating 
+        ? '../../../assets/img/icon/Star 4.svg' 
+        : '../../../assets/img/icon/Stars.svg'"
+      class="star"
+    >
+
+  </div>
+
+  <!-- textarea -->
+  <ion-textarea 
+    *ngIf="showReviewBox"
+    class="custom-textarea"
+    placeholder="المزيد من التفاصيل..."
+    rows="5">
+  </ion-textarea>
+
+  <!-- button -->
+  <div *ngIf="showReviewBox" class="submit-wrapper">
+    <button class="submit-btn" (click)="submitReview()">
+      ارسال
+      <img src="../../../assets/img/icon/send-03.svg" class="arrow">
+    </button>
+  </div>
+
+</div>
+<!-- <div class="stars-wrapper">
    <div class="ion-display-flex ion-text-center ion-align-items-center ion-justify-content-center gap-10">
   
   <img 
@@ -114,7 +147,7 @@
   >
 
 </div>
-<!-- textarea -->
+
 <ion-textarea 
   *ngIf="selectedRating > 0"
    class="custom-textarea"
@@ -128,7 +161,7 @@
     <img src="../../../assets/img/icon/send-03.svg" class="arrow">
   </button>
 </div>
-</div>
+</div> -->
    
    </div>
    <div class="card-content">

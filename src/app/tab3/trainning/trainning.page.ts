@@ -22,9 +22,17 @@ export class TrainningPage implements OnInit {
   }
 
   selectedRating: number = 0;
+  showReviewBox = false;
 
 setRating(index: number) {
   this.selectedRating = index;
+  this.showReviewBox = true;
+}
+submitReview() {
+  // هنا تبعت الداتا للسيرفر لو عايز
+
+  this.selectedRating = 0;
+  this.showReviewBox = false;
 }
  gohome() {
 
