@@ -605,6 +605,10 @@ ion-modal.notice-sheet-modal {
 
   align-items: flex-end !important;
 }
+.login-sheet-modal::part(content) {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
  .modal-box {
   display: flex;
   flex-direction: column;

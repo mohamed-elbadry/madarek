@@ -48,31 +48,51 @@
 }
 .terms ion-label{
   font-family: 'Vazirmatn-regular';
+  font-size: 16px;
 }
 .terms ion-label span{
   font-family: 'Vazirmatn-bold';
+  font-size: 16px;
 }
 .terms ion-checkbox {
   --border-width: 2px;
   --border-style: solid;
   --border-color: #D3D7DE;
+  
+}
+ion-checkbox {
+  --border-color: #8B5E3C;
+  --border-color-checked: #8B5E3C;
+  --checkbox-background: transparent; /* قبل التشيك */
+  --checkbox-background-checked: #8B5E3C; /* بعد التشيك */
+  --checkmark-color: #ffffff;
+  --border-width: 2px;
    width: 25px !important;
   height: 25px !important;
+}
+ion-checkbox {
+  --size: 24px; /* أهم سطر */
+}
+
+ion-checkbox::part(container) {
+  width: 24px;
+  height: 24px;
 }
 .checkbox-row ion-checkbox{
   --border-color: #CDD3DD;
   --border-width: 1px;
+  
 }
 .terms ion-checkbox-checked{
-  --checkbox-background-checked: #5b220b;
-  --border-color: #5b220b;               /* لون البوردر */
-  --checkmark-color: #fff;   
+  --checkbox-background-checked: #5b220b !important;  /* لون الخلفية لما يبقى متعلم */
+  --border-color: #5b220b !important;               /* لون البوردر */
+  --checkmark-color: #fff !important;               /* لون علامة الصح */
 } 
 .custom-check {
   /* لون الخلفية لما يبقى متعلم */
-  --checkbox-background-checked: #5b220b;
-  --border-color: #5b220b;               /* لون البوردر */
-  --checkmark-color: #fff;               /* لون علامة الصح */
+  --checkbox-background-checked: #5b220b !important;
+  --border-color: #5b220b !important;               /* لون البوردر */
+  --checkmark-color: #fff !important;               /* لون علامة الصح */
 }
 .google-btn,
 .guest-btn {
