@@ -78,19 +78,46 @@ async  verifyOtp() {
   // ✅ فتح Modal محفوظ
   // =========================
 
-  const redirectModal = this.authservice.getRedirectModal();
 
-  if (redirectModal) {
 
-    this.authservice.clearRedirectModal();
-    this.authservice.clearRedirectUrl();
+//   const redirectModal = this.authservice.getRedirectModal();
+
+// if (redirectModal) {
+
+//   this.authservice.clearRedirectModal();
+//   this.authservice.clearRedirectUrl();
    
 
-    const modal = await this.authservice.openSavedModal(
-      redirectModal
-    );
-    return;
-  }
+//   const modal = await this.authservice.openSavedModal(
+//     redirectModal
+//   );
+//   return;
+// }
+
+
+
+
+
+  const redirectModal = this.authservice.getRedirectModal();
+
+if (redirectModal) {
+
+  this.authservice.clearRedirectModal();
+  this.authservice.clearRedirectUrl();
+
+  // 🔥 امسح Stack الـ OTP بالكامل
+  await this.navCtrl.navigateRoot('/tabs/tab1');
+
+  // ⏳ استنى الـ navigation يخلص
+  await new Promise(resolve => setTimeout(resolve, 300));
+
+  // ✅ افتح الـ modal فوق Tab1
+  await this.authservice.openSavedModal(
+    redirectModal
+  );
+
+  return;
+}
 
   // =========================
   // Default
