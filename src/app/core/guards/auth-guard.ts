@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, Router, ActivatedRouteSnapshot } from '@angular/router';
+import { CanActivate, Router, ActivatedRouteSnapshot,RouterStateSnapshot } from '@angular/router';
 import { AuthService } from '../services/auth';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
     private router: Router
   ) {}
 
-  canActivate(route: ActivatedRouteSnapshot): boolean {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
     const type = route.data['type'];
     const phone = this.authservice.getPhone()?.trim();
@@ -56,6 +56,9 @@ if (type === 'auth') {
   if (!this.authservice.isGuestUser()) {
 
     // فتح المودال
+   this.authservice.setRedirectUrl(state.url);
+
+    // ✅ فتح Login Modal
     this.authservice.openLoginModal();
 
     return false; // يمنع الدخول

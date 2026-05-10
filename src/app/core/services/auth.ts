@@ -1,12 +1,45 @@
 import { Injectable } from '@angular/core';
 import { LoginModalComponent } from 'src/app/features/login/modal/modal.component';
 import { ModalController } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+private redirectUrl: string | null = null;
+  private redirectModal: any = null;
+  constructor(private router: Router,private modalCtrl: ModalController) { }
+   // =========================
+  // ROUTE
+  // =========================
 
-  constructor(private modalCtrl: ModalController) { }
+  setRedirectUrl(url: string) {
+    this.redirectUrl = url;
+  }
+
+  getRedirectUrl() {
+    return this.redirectUrl;
+  }
+
+  clearRedirectUrl() {
+    this.redirectUrl = null;
+  }
+   // =========================
+  // MODAL
+  // =========================
+
+  setRedirectModal(component: any) {
+    this.redirectModal = component;
+  }
+
+  getRedirectModal() {
+    return this.redirectModal;
+  }
+
+  clearRedirectModal() {
+    this.redirectModal = null;
+  }
+
   // 📱 رقم الموبايل
   private phone: string = '';
 
@@ -19,7 +52,7 @@ export class AuthService {
   }
 
   isAllowed(): boolean {
-    return this.phone === '123456';
+    return this.phone === '66543210';
   }
 
   // 🔐 OTP Error
@@ -66,7 +99,16 @@ export class AuthService {
 
     await modal.present();
   }
+async openSavedModal(component: any) {
 
+  const modal = await this.modalCtrl.create({
+    component: component
+  });
+
+  await modal.present();
+
+  return modal;
+}
   // 🧹 (اختياري مهم) تسجيل خروج / Reset
   logout() {
     this.phone = '';

@@ -36,7 +36,7 @@ export class VerfiymobilecodePage implements OnInit {
 
   ngOnInit() {}
 
-  verifyOtp() {
+async  verifyOtp() {
     // نحول الـ OTP لـ string
     const otpValue = Array.isArray(this.otp) ? this.otp.join('') :String(this.otp);
 
@@ -54,11 +54,46 @@ export class VerfiymobilecodePage implements OnInit {
     // حفظ الكود
     this.authservice.setOtp(otpValue);
 
-    console.log('OTP OK:', otpValue);
+    // ✅ المستخدم بقى Login
+  this.authservice.setGuest(true);
 
-    // التوجيه للتاب
-    this.router.navigate(['/tabs/tab1']);
-    this.authservice.setGuest(true); // تم تسجيل الدخول بنجاح، مش Guest بعد كده
+  // =========================
+  // ✅ فتح Route محفوظ
+  // =========================
+
+  const redirectUrl = this.authservice.getRedirectUrl();
+
+  if (redirectUrl) {
+
+    this.authservice.clearRedirectUrl();
+
+    await this.router.navigateByUrl(redirectUrl);
+
+    return;
+  }
+
+  // =========================
+  // ✅ فتح Modal محفوظ
+  // =========================
+
+  const redirectModal = this.authservice.getRedirectModal();
+
+  if (redirectModal) {
+
+    this.authservice.clearRedirectModal();
+
+    const modal = await this.authservice.openSavedModal(
+      redirectModal
+    );
+
+    return;
+  }
+
+  // =========================
+  // Default
+  // =========================
+
+  this.router.navigate(['/tabs/tab1']);
   }
 
   // 🔔 Toast

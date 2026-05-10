@@ -70,7 +70,7 @@ export class MobilecodePage implements OnInit {
 
     this.auth.setPhone(phone);
 
-    if (phone === '123456') {
+    if (phone === '66543210') {
       this.router.navigate(['/verfiymobilecode']);
     }
     else if (phone === '123456789') {

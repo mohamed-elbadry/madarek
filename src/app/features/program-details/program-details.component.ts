@@ -53,6 +53,9 @@ export class ProgramDetailsComponent implements OnInit {
     await modal.present();
 
   } else {
+ this.authService.setRedirectModal(
+    ProgramDetailsComponent
+  );
 
     // 👇 User → Login
     const modal = await this.modalCtrl.create({
