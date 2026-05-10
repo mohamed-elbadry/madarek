@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonInputOtp } f
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth';
 import { ToastController } from '@ionic/angular/standalone';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-verfiymobilecode',
@@ -31,7 +32,8 @@ export class VerfiymobilecodePage implements OnInit {
   constructor(
     private authservice: AuthService,
     private router: Router,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private navCtrl: NavController
   ) {}
 
   ngOnInit() {}
@@ -65,12 +67,12 @@ async  verifyOtp() {
 
   if (redirectUrl) {
 
-    this.authservice.clearRedirectUrl();
+  this.authservice.clearRedirectUrl();
 
-    await this.router.navigateByUrl(redirectUrl);
+ this.navCtrl.navigateRoot(redirectUrl || '/tabs/tab1');
 
-    return;
-  }
+  return;
+}
 
   // =========================
   // ✅ فتح Modal محفوظ
@@ -81,19 +83,19 @@ async  verifyOtp() {
   if (redirectModal) {
 
     this.authservice.clearRedirectModal();
+    this.authservice.clearRedirectUrl();
+   
 
     const modal = await this.authservice.openSavedModal(
       redirectModal
     );
-
     return;
   }
 
   // =========================
   // Default
   // =========================
-
-  this.router.navigate(['/tabs/tab1']);
+ this.navCtrl.navigateRoot('/tabs/tab1');
   }
 
   // 🔔 Toast

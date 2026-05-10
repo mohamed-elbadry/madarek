@@ -12,7 +12,15 @@ private redirectUrl: string | null = null;
    // =========================
   // ROUTE
   // =========================
+private lastUrl: string = '/tabs/tab1';
 
+setLastUrl(url: string) {
+  this.lastUrl = url;
+}
+
+getLastUrl() {
+  return this.lastUrl;
+}
   setRedirectUrl(url: string) {
     this.redirectUrl = url;
   }
@@ -52,7 +60,7 @@ private redirectUrl: string | null = null;
   }
 
   isAllowed(): boolean {
-    return this.phone === '66543210';
+    return this.phone === '555555555';
   }
 
   // 🔐 OTP Error
@@ -87,18 +95,52 @@ private redirectUrl: string | null = null;
   isGuestUser(): boolean {
     return JSON.parse(localStorage.getItem('isGuest') || 'false');
   }
- async openLoginModal() {
-    const modal = await this.modalCtrl.create({
-      component: LoginModalComponent,
-      cssClass: 'login-sheet-modal',
-      initialBreakpoint: 0.5,
-      breakpoints: [0, 0.5, 1],
-      backdropBreakpoint: 0.3,
-      handle: true
-    });
+//  async openLoginModal() {
+//     const modal = await this.modalCtrl.create({
+//       component: LoginModalComponent,
+//       cssClass: 'login-sheet-modal',
+//       initialBreakpoint: 0.5,
+//       breakpoints: [0, 0.5, 1],
+//       backdropBreakpoint: 0.3,
+//       handle: true
+//     });
 
-    await modal.present();
+//     await modal.present();
+//   }
+
+
+async openLoginModal() {
+  const modal = await this.modalCtrl.create({
+    component: LoginModalComponent,
+    cssClass: 'login-sheet-modal',
+    initialBreakpoint: 0.5,
+    breakpoints: [0, 0.5, 1],
+    backdropBreakpoint: 0.3,
+    handle: true
+  });
+
+  await modal.present();
+
+  const { role } = await modal.onDidDismiss();
+
+  if (role === 'success') {
+    this.router.navigateByUrl('/tabs/tab1', {
+      replaceUrl: true
+    });
   }
+}
+
+
+
+loginSuccess() {
+  this.clearRedirectUrl();
+
+  this.router.navigateByUrl('/tabs/tab1', {
+    replaceUrl: true
+  });
+}
+
+
 async openSavedModal(component: any) {
 
   const modal = await this.modalCtrl.create({

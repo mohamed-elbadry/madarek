@@ -56,7 +56,7 @@ export class ProgramDetailsComponent implements OnInit {
  this.authService.setRedirectModal(
     ProgramDetailsComponent
   );
-
+this.authService.setLastUrl(this.router.url);
     // 👇 User → Login
     const modal = await this.modalCtrl.create({
       component: LoginModalComponent,

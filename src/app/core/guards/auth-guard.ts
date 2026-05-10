@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, Router, ActivatedRouteSnapshot,RouterStateSnapshot } from '@angular/router';
+import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { AuthService } from '../services/auth';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate {
   constructor(
     private authservice: AuthService,
     private router: Router
-  ) {}
+  ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
@@ -51,21 +51,21 @@ export class AuthGuard implements CanActivate {
 
       return true;
     }
-if (type === 'auth') {
+    if (type === 'auth') {
 
-  if (!this.authservice.isGuestUser()) {
+      if (!this.authservice.isGuestUser()) {
 
-    // فتح المودال
-   this.authservice.setRedirectUrl(state.url);
+        // فتح المودال
+        this.authservice.setRedirectUrl(state.url);
 
-    // ✅ فتح Login Modal
-    this.authservice.openLoginModal();
+        // ✅ فتح Login Modal
+        this.authservice.openLoginModal();
 
-    return false; // يمنع الدخول
-  }
+        return false; // يمنع الدخول
+      }
 
-  return true;
-}
+      return true;
+    }
     // 🚫 أي حالة غير معروفة
     this.router.navigate(['/']);
     return false;

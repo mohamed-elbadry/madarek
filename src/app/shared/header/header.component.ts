@@ -6,6 +6,7 @@ import { MenuService } from '../../core/services/menu';
 import { AuthService } from 'src/app/core/services/auth';
 import { LoginModalComponent } from 'src/app/features/login/modal/modal.component';
 import { NoticeComponent } from 'src/app/features/notice/notice.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ import { NoticeComponent } from 'src/app/features/notice/notice.component';
   imports: [IonHeader, NgIf, IonToolbar, IonButtons, IonButton, IonTitle],
 })
 export class HeaderComponent implements OnInit {
+  [x: string]: any;
 
   @Input() title!: string;
   @Input() closemodal!: boolean;
@@ -25,6 +27,7 @@ export class HeaderComponent implements OnInit {
     private navCtrl: NavController,
     private modalctrl: ModalController,
      private authService: AuthService,
+     private router: Router,
   ) {}
 
   ngOnInit() {}
@@ -34,6 +37,16 @@ export class HeaderComponent implements OnInit {
   goback() {
     this.navCtrl.back();
   }
+
+
+//   goback() {
+//   if (this.router.url.includes('otp')) {
+//     this.router.navigateByUrl('/tabs/tab1', { replaceUrl: true });
+//     return;
+//   }
+
+//   window.history.back();
+// }
 
   close() {
     this.modalctrl.dismiss();
